@@ -1,0 +1,528 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		847D543C1E585AD3001A1C4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D543B1E585AD3001A1C4F /* AppDelegate.swift */; };
+		847D543E1E585AD3001A1C4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D543D1E585AD3001A1C4F /* ViewController.swift */; };
+		847D54411E585AD3001A1C4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847D543F1E585AD3001A1C4F /* Main.storyboard */; };
+		847D54431E585AD3001A1C4F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 847D54421E585AD3001A1C4F /* Assets.xcassets */; };
+		847D54461E585AD3001A1C4F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847D54441E585AD3001A1C4F /* LaunchScreen.storyboard */; };
+		847D54511E585AD4001A1C4F /* IronWaterTestTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D54501E585AD4001A1C4F /* IronWaterTestTests.swift */; };
+		847D545C1E585AD4001A1C4F /* IronWaterTestUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D545B1E585AD4001A1C4F /* IronWaterTestUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		847D544D1E585AD4001A1C4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 847D54301E585AD3001A1C4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 847D54371E585AD3001A1C4F;
+			remoteInfo = IronWaterTest;
+		};
+		847D54581E585AD4001A1C4F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 847D54301E585AD3001A1C4F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 847D54371E585AD3001A1C4F;
+			remoteInfo = IronWaterTest;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		847D54381E585AD3001A1C4F /* IronWaterTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IronWaterTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		847D543B1E585AD3001A1C4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		847D543D1E585AD3001A1C4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		847D54401E585AD3001A1C4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		847D54421E585AD3001A1C4F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		847D54451E585AD3001A1C4F /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		847D54471E585AD3001A1C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		847D544C1E585AD4001A1C4F /* IronWaterTestTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IronWaterTestTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		847D54501E585AD4001A1C4F /* IronWaterTestTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IronWaterTestTests.swift; sourceTree = "<group>"; };
+		847D54521E585AD4001A1C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		847D54571E585AD4001A1C4F /* IronWaterTestUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = IronWaterTestUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		847D545B1E585AD4001A1C4F /* IronWaterTestUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IronWaterTestUITests.swift; sourceTree = "<group>"; };
+		847D545D1E585AD4001A1C4F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		847D54351E585AD3001A1C4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847D54491E585AD4001A1C4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847D54541E585AD4001A1C4F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		847D542F1E585AD3001A1C4F = {
+			isa = PBXGroup;
+			children = (
+				847D543A1E585AD3001A1C4F /* IronWaterTest */,
+				847D544F1E585AD4001A1C4F /* IronWaterTestTests */,
+				847D545A1E585AD4001A1C4F /* IronWaterTestUITests */,
+				847D54391E585AD3001A1C4F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		847D54391E585AD3001A1C4F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				847D54381E585AD3001A1C4F /* IronWaterTest.app */,
+				847D544C1E585AD4001A1C4F /* IronWaterTestTests.xctest */,
+				847D54571E585AD4001A1C4F /* IronWaterTestUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		847D543A1E585AD3001A1C4F /* IronWaterTest */ = {
+			isa = PBXGroup;
+			children = (
+				847D543B1E585AD3001A1C4F /* AppDelegate.swift */,
+				847D543D1E585AD3001A1C4F /* ViewController.swift */,
+				847D543F1E585AD3001A1C4F /* Main.storyboard */,
+				847D54421E585AD3001A1C4F /* Assets.xcassets */,
+				847D54441E585AD3001A1C4F /* LaunchScreen.storyboard */,
+				847D54471E585AD3001A1C4F /* Info.plist */,
+			);
+			path = IronWaterTest;
+			sourceTree = "<group>";
+		};
+		847D544F1E585AD4001A1C4F /* IronWaterTestTests */ = {
+			isa = PBXGroup;
+			children = (
+				847D54501E585AD4001A1C4F /* IronWaterTestTests.swift */,
+				847D54521E585AD4001A1C4F /* Info.plist */,
+			);
+			path = IronWaterTestTests;
+			sourceTree = "<group>";
+		};
+		847D545A1E585AD4001A1C4F /* IronWaterTestUITests */ = {
+			isa = PBXGroup;
+			children = (
+				847D545B1E585AD4001A1C4F /* IronWaterTestUITests.swift */,
+				847D545D1E585AD4001A1C4F /* Info.plist */,
+			);
+			path = IronWaterTestUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		847D54371E585AD3001A1C4F /* IronWaterTest */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 847D54601E585AD4001A1C4F /* Build configuration list for PBXNativeTarget "IronWaterTest" */;
+			buildPhases = (
+				847D54341E585AD3001A1C4F /* Sources */,
+				847D54351E585AD3001A1C4F /* Frameworks */,
+				847D54361E585AD3001A1C4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = IronWaterTest;
+			productName = IronWaterTest;
+			productReference = 847D54381E585AD3001A1C4F /* IronWaterTest.app */;
+			productType = "com.apple.product-type.application";
+		};
+		847D544B1E585AD4001A1C4F /* IronWaterTestTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 847D54631E585AD4001A1C4F /* Build configuration list for PBXNativeTarget "IronWaterTestTests" */;
+			buildPhases = (
+				847D54481E585AD4001A1C4F /* Sources */,
+				847D54491E585AD4001A1C4F /* Frameworks */,
+				847D544A1E585AD4001A1C4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				847D544E1E585AD4001A1C4F /* PBXTargetDependency */,
+			);
+			name = IronWaterTestTests;
+			productName = IronWaterTestTests;
+			productReference = 847D544C1E585AD4001A1C4F /* IronWaterTestTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		847D54561E585AD4001A1C4F /* IronWaterTestUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 847D54661E585AD4001A1C4F /* Build configuration list for PBXNativeTarget "IronWaterTestUITests" */;
+			buildPhases = (
+				847D54531E585AD4001A1C4F /* Sources */,
+				847D54541E585AD4001A1C4F /* Frameworks */,
+				847D54551E585AD4001A1C4F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				847D54591E585AD4001A1C4F /* PBXTargetDependency */,
+			);
+			name = IronWaterTestUITests;
+			productName = IronWaterTestUITests;
+			productReference = 847D54571E585AD4001A1C4F /* IronWaterTestUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		847D54301E585AD3001A1C4F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 0820;
+				LastUpgradeCheck = 0820;
+				ORGANIZATIONNAME = "админ";
+				TargetAttributes = {
+					847D54371E585AD3001A1C4F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+					};
+					847D544B1E585AD4001A1C4F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 847D54371E585AD3001A1C4F;
+					};
+					847D54561E585AD4001A1C4F = {
+						CreatedOnToolsVersion = 8.2.1;
+						ProvisioningStyle = Automatic;
+						TestTargetID = 847D54371E585AD3001A1C4F;
+					};
+				};
+			};
+			buildConfigurationList = 847D54331E585AD3001A1C4F /* Build configuration list for PBXProject "IronWaterTest" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 847D542F1E585AD3001A1C4F;
+			productRefGroup = 847D54391E585AD3001A1C4F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				847D54371E585AD3001A1C4F /* IronWaterTest */,
+				847D544B1E585AD4001A1C4F /* IronWaterTestTests */,
+				847D54561E585AD4001A1C4F /* IronWaterTestUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		847D54361E585AD3001A1C4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847D54461E585AD3001A1C4F /* LaunchScreen.storyboard in Resources */,
+				847D54431E585AD3001A1C4F /* Assets.xcassets in Resources */,
+				847D54411E585AD3001A1C4F /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847D544A1E585AD4001A1C4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847D54551E585AD4001A1C4F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		847D54341E585AD3001A1C4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847D543E1E585AD3001A1C4F /* ViewController.swift in Sources */,
+				847D543C1E585AD3001A1C4F /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847D54481E585AD4001A1C4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847D54511E585AD4001A1C4F /* IronWaterTestTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		847D54531E585AD4001A1C4F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				847D545C1E585AD4001A1C4F /* IronWaterTestUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		847D544E1E585AD4001A1C4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 847D54371E585AD3001A1C4F /* IronWaterTest */;
+			targetProxy = 847D544D1E585AD4001A1C4F /* PBXContainerItemProxy */;
+		};
+		847D54591E585AD4001A1C4F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 847D54371E585AD3001A1C4F /* IronWaterTest */;
+			targetProxy = 847D54581E585AD4001A1C4F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		847D543F1E585AD3001A1C4F /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				847D54401E585AD3001A1C4F /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		847D54441E585AD3001A1C4F /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				847D54451E585AD3001A1C4F /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		847D545E1E585AD4001A1C4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		847D545F1E585AD4001A1C4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 10.2;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				SWIFT_OPTIMIZATION_LEVEL = "-Owholemodule";
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		847D54611E585AD4001A1C4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = IronWaterTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Crimea.IronWaterTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Debug;
+		};
+		847D54621E585AD4001A1C4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				INFOPLIST_FILE = IronWaterTest/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Crimea.IronWaterTest;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+			};
+			name = Release;
+		};
+		847D54641E585AD4001A1C4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = IronWaterTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Crimea.IronWaterTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IronWaterTest.app/IronWaterTest";
+			};
+			name = Debug;
+		};
+		847D54651E585AD4001A1C4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				INFOPLIST_FILE = IronWaterTestTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Crimea.IronWaterTestTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/IronWaterTest.app/IronWaterTest";
+			};
+			name = Release;
+		};
+		847D54671E585AD4001A1C4F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = IronWaterTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Crimea.IronWaterTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = IronWaterTest;
+			};
+			name = Debug;
+		};
+		847D54681E585AD4001A1C4F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				INFOPLIST_FILE = IronWaterTestUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = Crimea.IronWaterTestUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 3.0;
+				TEST_TARGET_NAME = IronWaterTest;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		847D54331E585AD3001A1C4F /* Build configuration list for PBXProject "IronWaterTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847D545E1E585AD4001A1C4F /* Debug */,
+				847D545F1E585AD4001A1C4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		847D54601E585AD4001A1C4F /* Build configuration list for PBXNativeTarget "IronWaterTest" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847D54611E585AD4001A1C4F /* Debug */,
+				847D54621E585AD4001A1C4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		847D54631E585AD4001A1C4F /* Build configuration list for PBXNativeTarget "IronWaterTestTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847D54641E585AD4001A1C4F /* Debug */,
+				847D54651E585AD4001A1C4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+		847D54661E585AD4001A1C4F /* Build configuration list for PBXNativeTarget "IronWaterTestUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				847D54671E585AD4001A1C4F /* Debug */,
+				847D54681E585AD4001A1C4F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 847D54301E585AD3001A1C4F /* Project object */;
+}

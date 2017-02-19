@@ -1,14 +1,69 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11134" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zim-Ge-fCC">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11106"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--View Controller Splash-->
+        <scene sceneID="uaF-xJ-P8s">
+            <objects>
+                <viewController id="zim-Ge-fCC" customClass="ViewControllerSplash" customModule="IronWaterTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="fbX-CK-ZEh"/>
+                        <viewControllerLayoutGuide type="bottom" id="Zid-5Y-hfs"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="Wdf-DP-Qxx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qBBVWsIKRfQ" translatesAutoresizingMaskIntoConstraints="NO" id="MO6-Ie-ubr">
+                                <rect key="frame" x="109" y="237" width="156" height="193"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="MO6-Ie-ubr" secondAttribute="height" multiplier="15:8" constant="-205.125" id="iJz-Wz-3Zg"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="MO6-Ie-ubr" firstAttribute="centerY" secondItem="Wdf-DP-Qxx" secondAttribute="centerY" id="6Pw-Ug-AiS"/>
+                            <constraint firstItem="MO6-Ie-ubr" firstAttribute="centerX" secondItem="Wdf-DP-Qxx" secondAttribute="centerX" id="eIq-BU-fQ5"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="9UG-uV-ajF" kind="showDetail" identifier="showNextController" id="8Bx-lj-eQt"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="rkz-x1-eF8" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-1065" y="-798"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="C3m-HJ-E7G">
+            <objects>
+                <navigationController id="9UG-uV-ajF" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="lXw-9z-gOR">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="iDJ-JL-qHw"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Apg-Ak-AYT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-234" y="-798"/>
+        </scene>
+        <!--Просмотр-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="IronWaterTest" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
@@ -16,11 +71,90 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jRS-kv-Nij">
+                                <rect key="frame" x="16" y="0.0" width="343" height="667"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="BYZ-38-t0r" id="2ci-zd-sZe"/>
+                                    <outlet property="delegate" destination="BYZ-38-t0r" id="maT-Pv-IPX"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="jRS-kv-Nij" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QpY-Kf-KsE"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jRS-kv-Nij" secondAttribute="bottom" id="cl9-Ci-TzR"/>
+                            <constraint firstItem="jRS-kv-Nij" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="wcZ-Cp-QaH"/>
+                            <constraint firstItem="jRS-kv-Nij" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="z1G-Ox-Guc"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Просмотр" id="GOq-F0-gtX">
+                        <barButtonItem key="rightBarButtonItem" title="Редактировать" id="IcM-cj-L2B">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <segue destination="OlM-iE-C1H" kind="push" id="gU5-VC-O2N"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="jRS-kv-Nij" id="k8y-ck-X9b"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="668" y="-798.35082458770626"/>
+        </scene>
+        <!--Редактирование-->
+        <scene sceneID="v5J-Zl-BNP">
+            <objects>
+                <viewController id="OlM-iE-C1H" customClass="ViewControllerEdit" customModule="IronWaterTest" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="OI5-k0-EqQ"/>
+                        <viewControllerLayoutGuide type="bottom" id="c0i-7l-Iht"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="2dW-gW-eEM">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pKl-um-Eee">
+                                <rect key="frame" x="24" y="8" width="327" height="651"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <connections>
+                                    <outlet property="dataSource" destination="OlM-iE-C1H" id="MmP-0G-677"/>
+                                    <outlet property="delegate" destination="OlM-iE-C1H" id="uGo-L3-tTJ"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="pKl-um-Eee" firstAttribute="leading" secondItem="2dW-gW-eEM" secondAttribute="leadingMargin" constant="8" id="IAB-QA-mM7"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pKl-um-Eee" secondAttribute="trailing" constant="8" id="KZD-rK-pq6"/>
+                            <constraint firstItem="pKl-um-Eee" firstAttribute="top" secondItem="2dW-gW-eEM" secondAttribute="topMargin" constant="8" id="l7t-V6-pds"/>
+                            <constraint firstItem="c0i-7l-Iht" firstAttribute="top" secondItem="pKl-um-Eee" secondAttribute="bottom" constant="8" id="nW7-L0-gf4"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Редактирование" id="duC-Dv-m1G">
+                        <barButtonItem key="leftBarButtonItem" title="Назад" id="u9H-FW-jgD">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="BackAndTest:" destination="OlM-iE-C1H" id="0PP-Ba-wYp"/>
+                            </connections>
+                        </barButtonItem>
+                        <barButtonItem key="rightBarButtonItem" title="Сохраннить" id="Ib0-IL-Jmt">
+                            <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
+                            <connections>
+                                <action selector="SaveUserEdit:" destination="OlM-iE-C1H" id="eU8-g5-0oa"/>
+                            </connections>
+                        </barButtonItem>
+                    </navigationItem>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="buS-Mv-adc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1396" y="-798.35082458770626"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="qBBVWsIKRfQ" width="156" height="134"/>
+    </resources>
 </document>

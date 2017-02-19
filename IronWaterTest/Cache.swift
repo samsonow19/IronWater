@@ -7,3 +7,35 @@
 //
 
 import Foundation
+import Realm
+import RealmSwift
+class Cache {
+    static func UpdateUser(user: ModelUser ){
+        let realm = try! Realm()
+        try! realm.write {
+            realm.add(user, update: true)
+        }
+    }
+
+    static func GetUser()->ModelUser {
+        let realm = try! Realm()
+        let userCache = realm.objects(ModelUser.self)
+        if userCache.count == 0
+        {
+            let usermodel : ModelUser = ModelUser()
+        
+            usermodel.userSurname = "Самсонов"
+            usermodel.userName = "Женя"
+            usermodel.userPartronymic = "Сергеевич"
+            usermodel.userBithday = "23.09.1993"
+            usermodel.iserGender = "мужской"
+            Cache.UpdateUser(user: usermodel)
+            
+            return usermodel
+            
+        }
+
+    return  userCache.first!
+
+}
+}

@@ -10,6 +10,9 @@ import UIKit
 
 class TableViewCellUser: UITableViewCell {
 
+    @IBOutlet weak var constLabel: UILabel!
+    @IBOutlet weak var editLabel: UILabel!
+    
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

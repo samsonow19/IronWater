@@ -30,7 +30,7 @@ class TableViewCellUserEdit: UITableViewCell {
         
     }
     deinit {
-        NotificationCenter.default.removeObserver(self)
+  //      NotificationCenter.default.removeObserver(self)
     }
     
 

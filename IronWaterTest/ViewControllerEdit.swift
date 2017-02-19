@@ -104,11 +104,10 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
         if validateName&&validateSurname&&validatePartronymic&&validateBithday == true {
             
             print("ok!:)")
+            print(userModelEdit)
             Cache.UpdateUser(user: userModelEdit)
-            
-           
-            
-            
+
+            NotificationCenter.default.post(Notification(name:RELOAD_NOTIFICATION))
             self.navigationController?.popViewController(animated: true)
             
         }

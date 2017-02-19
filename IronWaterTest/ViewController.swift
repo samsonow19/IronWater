@@ -13,22 +13,38 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     var array: [String]!
     var pickheight: CGFloat = 0.0
     @IBOutlet weak var tableView: UITableView!
-    
+    var  user : ModelUser!
     override func viewDidLoad() {
 
-        let  user : ModelUser = Cache.GetUser()
+        user = Cache.GetUser()
         array =  [String]()
         array.append(user.userName!)
         array.append(user.userSurname!)
         array.append(user.userPartronymic!)
         array.append(user.userBithday!)
         array.append(user.iserGender!)
-
+        NotificationCenter.default.addObserver(forName: RELOAD_NOTIFICATION, object: nil, queue: nil) { (Notification) in
+           
+              let newUser  = Cache.GetUser()
+            print(self.user)
+            self.array.removeAll()
+              self.tableView.reloadData()
+            self.array.append(newUser.userName!)
+            self.array.append(newUser.userSurname!)
+            self.array.append(newUser.userPartronymic!)
+            self.array.append(newUser.userBithday!)
+            self.array.append(newUser.iserGender!)
+             print(self.array)
+        }
     }
+    
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
      
+    }
+    deinit {
+        NotificationCenter.default.removeObserver(self)
     }
     
     
@@ -45,7 +61,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       
         let cell = Bundle.main.loadNibNamed("TableViewCellUser", owner: self, options: nil)?.first as! TableViewCellUser
-        
+        print(array)
         cell.constLabel.text = arrayConst[indexPath.row]
         cell.editLabel.text = array[indexPath.row]
 

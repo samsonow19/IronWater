@@ -13,8 +13,10 @@ class Cache {
     static func UpdateUser(user: ModelUser ){
         let realm = try! Realm()
         do{
+            user.idUser = 0
        
             try! realm.write {
+                
                 realm.add(user, update: true)
             }
         }

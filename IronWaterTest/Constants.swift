@@ -16,3 +16,4 @@ var userModelEdit =  ModelUser()
 
 
 let VALIDATE_NOTIFICATION =   Notification.Name(rawValue: "ValidateNotification")
+let RELOAD_NOTIFICATION = Notification.Name(rawValue: "ReloadNotification ")

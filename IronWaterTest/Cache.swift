@@ -7,14 +7,19 @@
 //
 
 import Foundation
-import Realm
+//import Realm
 import RealmSwift
 class Cache {
     static func UpdateUser(user: ModelUser ){
         let realm = try! Realm()
-        try! realm.write {
-            realm.add(user, update: true)
+        do{
+       
+            try! realm.write {
+                realm.add(user, update: true)
+            }
         }
+       
+    
     }
 
     static func GetUser()->ModelUser {
@@ -34,8 +39,8 @@ class Cache {
             return usermodel
             
         }
-
-    return  userCache.first!
+    print(userCache)
+    return  userCache[0]
 
 }
 }

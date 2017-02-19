@@ -9,26 +9,51 @@
 import UIKit
 
 
-class TableViewCellUserEdit: UITableViewCell, UITextViewDelegate {
+class TableViewCellUserEdit: UITableViewCell {
     @IBOutlet weak var labelText: UILabel!
 
     @IBOutlet weak var editText: UITextView!
     
     var validDate = true
-    
-    
-    
+
     override func awakeFromNib() {
-        self.addDoneButtonOnKeyboard()
-        super.awakeFromNib()
-        editText.delegate = self
-     
         
+        super.awakeFromNib()
+
+        self.addDoneButtonOnKeyboard()
         // Initialization code
+        NotificationCenter.default.addObserver(forName: VALIDATE_NOTIFICATION, object: nil, queue: nil) { (Notification) in
+            self.validDateUser()
+            
+        }
+        
+        
     }
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
+    
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
+        
+        if labelText.text == "Имя" {
+         
+            userModelEdit.userName = editText.text
+        }
+        if labelText.text == "Фамилия" {
+         
+            userModelEdit.userSurname = editText.text
+        }
+        if labelText.text == "Отчество" {
+       
+            userModelEdit.userPartronymic = editText.text
+        }
+        if labelText.text == "Дата Рождения" {
+         
+            userModelEdit.userBithday = editText.text
+        
+        }
 
         // Configure the view for the selected state
     }
@@ -51,37 +76,65 @@ class TableViewCellUserEdit: UITableViewCell, UITextViewDelegate {
     }
     
     func doneButtonAction() {
-        self.labelText.resignFirstResponder()
+        self.editText.resignFirstResponder()
     }
     
     
     
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView.text  == "" {
-            validDate = false
+    func validDateUser() {
+      
+        if labelText.text == "Имя" {
+            validateName = checkValid(textViewEdit: editText.text)
+            userModelEdit.userName = editText.text
         }
-        
-        
-        if labelText.text == "" {
-          
-            let dateFormater = DateFormatter()
-            dateFormater.dateFormat = "yy.MM.dd"
-            var toDayDate = Date()
-            
-            let textFildDate = dateFormater.date(from: editText.text)
-            
-            if textFildDate! > toDayDate
-            {
-                validDate = false
+        if labelText.text == "Фамилия" {
+            validateSurname = checkValid(textViewEdit: editText.text)
+            userModelEdit.userSurname = editText.text
+        }
+        if labelText.text == "Отчество" {
+            validatePartronymic = checkValid(textViewEdit: editText.text)
+            userModelEdit.userPartronymic = editText.text
+        }
+        if labelText.text == "Дата Рождения" {
+            validateBithday = checkValid(textViewEdit: editText.text)
+            userModelEdit.userBithday = editText.text
+            if validateBithday == true {
+                validateBithday = checkValidDate(textViewEdit: editText.text)
+                
             }
-            
-            
-            
         }
+       
         
     }
-  
-
     
+ 
+    
+    func checkValid(textViewEdit: String) ->Bool {
+        
+        if textViewEdit  == "" {
+             return false
+        }
+     
+        return true
+        
+    }
+    
+    func checkValidDate(textViewEdit: String) ->Bool {
 
+        let dateFormatter: DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        dateFormatter.locale = Locale(identifier:"en_US_POSIX")
+        let datecomponents = dateFormatter.date(from: editText.text)
+        print(editText.text)
+        let now = Date()
+            
+        if (datecomponents! > now) {
+            return false
+        } else {
+            return true
+        }   
+        }
 }
+
+
+

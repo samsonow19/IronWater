@@ -7,7 +7,7 @@
 //
 
 import UIKit
-
+import RealmSwift
 class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewDelegate {
 
     var arrayConst: [String]  = ["Имя","Фамилия","Отчество","Дата Рождения","Пол"]
@@ -35,7 +35,6 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         
         return arrayConst.count
     }
@@ -43,6 +42,8 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row != 4 {
+        print(arrayConst)
+        print(array)
         let cell = Bundle.main.loadNibNamed("TableViewCellEdit", owner: self, options: nil)?.first as! TableViewCellUserEdit
         cell.labelText.text = arrayConst[indexPath.row]
         cell.editText.text = array[indexPath.row]
@@ -56,9 +57,11 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
             return cell
         }
         
-        
-        
     }
+    
+    
+    
+  
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
@@ -67,17 +70,81 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
     
    
     @IBAction func SaveUserEdit(_ sender: Any) {
-        
-        
+       validData()
     }
     
-    func validatinDateUser() -> Bool{
-        
-        return true
-    }
+
 
     
     @IBAction func BackAndTest(_ sender: Any) {
+        if dataChanged() == true {
+            let message = "Вы желаете сохранить изменения, в противном случае внесенные правки будут отменены"
+            let alertError = UIAlertController(title: "Данные были изменены.", message: message, preferredStyle: UIAlertControllerStyle.alert)
+            
+            alertError.addAction(UIAlertAction(title: "Сохранить", style: UIAlertActionStyle.default, handler:{ (UIAlertAction) in
+                self.validData()
+
+            }))
+            
+            alertError.addAction(UIAlertAction(title: "Пропустить", style: UIAlertActionStyle.default, handler: { (UIAlertAction) in
+                self.navigationController?.popViewController(animated: true)
+                
+            }))
+            self.present(alertError, animated: true, completion: nil)
+            
+        } else {
+
+             self.navigationController?.popViewController(animated: true)
+        }
+        
+    }
+    func validData(){
+        NotificationCenter.default.post(Notification(name:VALIDATE_NOTIFICATION))
+        
+        if validateName&&validateSurname&&validatePartronymic&&validateBithday == true {
+            
+            print("ok!:)")
+            Cache.UpdateUser(user: userModelEdit)
+            
+           
+            
+            
+            self.navigationController?.popViewController(animated: true)
+            
+        }
+        else {
+            let message = "все поля обязательные, дата должна вводится в формате 25.01.1990 и не должна быть в будущем"
+            let alertError = UIAlertController(title: "Ошибка", message: message, preferredStyle: UIAlertControllerStyle.alert)
+            
+            alertError.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
+            self.present(alertError, animated: true, completion: nil)
+            
+            print("ne ok!:)")
+        }
+
+    }
+    
+    func dataChanged()->Bool{
+        let  user  = Cache.GetUser()
+        print(userModelEdit)
+        if user.iserGender != userModelEdit.iserGender {
+            return true
+        }
+        if user.userBithday != userModelEdit.userBithday {
+            print(user.userBithday)
+            print(userModelEdit.userBithday)
+            return true
+        }
+        if user.userName != userModelEdit.userName {
+            return true
+        }
+        if user.userPartronymic != userModelEdit.userPartronymic {
+            return true
+        }
+        if user.userSurname != userModelEdit.userSurname {
+            return true
+        }
+        return false
     }
 
   

@@ -11,6 +11,7 @@
 		4EF2C6413ADCB4A507AB40EE /* Pods_IronWaterTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93C044FE0714ED8E950212 /* Pods_IronWaterTestTests.framework */; };
 		844D836C1E5983B900DFA006 /* TableViewGender.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844D836B1E5983B900DFA006 /* TableViewGender.xib */; };
 		844D83701E59890200DFA006 /* TableViewGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D836F1E59890200DFA006 /* TableViewGender.swift */; };
+		844D83721E59B33F00DFA006 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D83711E59B33F00DFA006 /* Constants.swift */; };
 		847D543C1E585AD3001A1C4F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D543B1E585AD3001A1C4F /* AppDelegate.swift */; };
 		847D543E1E585AD3001A1C4F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D543D1E585AD3001A1C4F /* ViewController.swift */; };
 		847D54411E585AD3001A1C4F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 847D543F1E585AD3001A1C4F /* Main.storyboard */; };
@@ -53,6 +54,7 @@
 		554B6755FB92E7B99256DA9D /* Pods_IronWaterTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IronWaterTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		844D836B1E5983B900DFA006 /* TableViewGender.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewGender.xib; sourceTree = "<group>"; };
 		844D836F1E59890200DFA006 /* TableViewGender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewGender.swift; sourceTree = "<group>"; };
+		844D83711E59B33F00DFA006 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		847D54381E585AD3001A1C4F /* IronWaterTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = IronWaterTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		847D543B1E585AD3001A1C4F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		847D543D1E585AD3001A1C4F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -168,6 +170,7 @@
 				847D54471E585AD3001A1C4F /* Info.plist */,
 				847D54721E586787001A1C4F /* ViewControllerSplash.swift */,
 				847D54791E5879AC001A1C4F /* Cache.swift */,
+				844D83711E59B33F00DFA006 /* Constants.swift */,
 			);
 			path = IronWaterTest;
 			sourceTree = "<group>";
@@ -500,6 +503,7 @@
 				847D543E1E585AD3001A1C4F /* ViewController.swift in Sources */,
 				847D54801E588C31001A1C4F /* TableViewCellUserEdit.swift in Sources */,
 				847D546F1E586284001A1C4F /* TableViewCellUser.swift in Sources */,
+				844D83721E59B33F00DFA006 /* Constants.swift in Sources */,
 				847D54781E587562001A1C4F /* ModelUser.swift in Sources */,
 				847D543C1E585AD3001A1C4F /* AppDelegate.swift in Sources */,
 				847D547A1E5879AC001A1C4F /* Cache.swift in Sources */,

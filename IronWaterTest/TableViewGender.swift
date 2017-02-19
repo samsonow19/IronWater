@@ -25,12 +25,13 @@ class TableViewGender: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSo
         pickerView.dataSource = self
         editTextView.delegate = self
         super.awakeFromNib()
+      
 
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-
+        userModelEdit.iserGender  = editTextView.text
     }
    
     
@@ -51,6 +52,7 @@ class TableViewGender: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSo
         editTextView.text = genderValue[row]
         pickerView.isHidden  = true
         editTextView.isHidden = false
+        
     }
    
     
@@ -59,6 +61,8 @@ class TableViewGender: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSo
             editTextView.isHidden = true
             self.pickerView.isHidden = false
             editTextView.endEditing(true)
+            userModelEdit.iserGender  = editTextView.text
+            
             
         }
     }

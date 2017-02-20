@@ -14,7 +14,7 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "146327C2CAC39F8D1511D55606981BFD"
+               BlueprintIdentifier = "EB71BF8781EBE8151CAE7DD132529EA5"
                BuildableName = "Pods_IronWaterTest.framework"
                BlueprintName = "Pods-IronWaterTest"
                ReferencedContainer = "container:Pods.xcodeproj">
@@ -45,7 +45,7 @@
       <MacroExpansion>
          <BuildableReference
             BuildableIdentifier = "primary"
-            BlueprintIdentifier = "146327C2CAC39F8D1511D55606981BFD"
+            BlueprintIdentifier = "EB71BF8781EBE8151CAE7DD132529EA5"
             BuildableName = "Pods_IronWaterTest.framework"
             BlueprintName = "Pods-IronWaterTest"
             ReferencedContainer = "container:Pods.xcodeproj">

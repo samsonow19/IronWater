@@ -22,41 +22,23 @@ class TableViewCellUserEdit: UITableViewCell, UITextViewDelegate {
 
         self.addDoneButtonOnKeyboard()
         editText.delegate = self
-        
-        
-  
-        
     }
     
-    
-    
-  
-    
-    
-    
-    
- 
     func textViewDidChange(_ textView: UITextView) {
-         self.validDateUser()
-        
-        
-        
+        self.validDateUser()
+
         let startHeight = textView.frame.size.height
         let calcHeight = textView.sizeThatFits(textView.frame.size).height  //iOS 8+ only
         
         if startHeight != calcHeight {
             NotificationCenter.default.post(Notification(name:RELOAD_CELL_NOTIFICATION))
-           
         }
-        
-
-        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         validDateUser()
-       
+
     }
     
     
@@ -69,7 +51,6 @@ class TableViewCellUserEdit: UITableViewCell, UITextViewDelegate {
         var items = [UIBarButtonItem]()
         items.append(flexSpace)
         items.append(done)
-        
         doneToolbar.items = items
         doneToolbar.sizeToFit()
         

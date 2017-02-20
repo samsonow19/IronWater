@@ -23,6 +23,7 @@ class Cache {
        
     
     }
+    
     static func UpdateUserEdit() {
         
     let realm = try! Realm()

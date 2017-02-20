@@ -46,8 +46,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.didReceiveMemoryWarning()
      
     }
-  
-    
+
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1

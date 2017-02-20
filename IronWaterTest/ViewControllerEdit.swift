@@ -28,19 +28,11 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
         
         NotificationCenter.default.addObserver(forName: RELOAD_CELL_NOTIFICATION, object: nil, queue: nil) { (Notification) in
             
-            UIView.setAnimationsEnabled(false) // Disable animations
+            UIView.setAnimationsEnabled(false)
             self.tabelViewEdit.beginUpdates()
             self.tabelViewEdit.endUpdates()
-            
-            // Might need to insert additional stuff here if scrolls
-            // table in an unexpected way.  This scrolls to the bottom
-            // of the table. (Though you might need something more
-            // complicated if editing in the middle.)
-            
             let scrollTo = self.tabelViewEdit.contentSize.height - self.tabelViewEdit.frame.size.height
-          
             self.tabelViewEdit.setContentOffset( CGPoint(x: 0, y: scrollTo), animated: false)
-            
             UIView.setAnimationsEnabled(true)
         }
         
@@ -59,10 +51,7 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
         
         return arrayConst.count
     }
-    
 
-    
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row != 4 {
         print(arrayConst)
@@ -91,18 +80,12 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
     }
     
     
+    // MARK: - @IBAction
     
-  
     
-   
-    
-   
     @IBAction func SaveUserEdit(_ sender: Any) {
        validData()
     }
-
-    
-
 
     
     @IBAction func BackAndTest(_ sender: Any) {
@@ -128,6 +111,10 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
         }
         
     }
+    
+    
+    // MARK: - MY Function validData and dataChanged
+    
     func validData(){
        
         if validateName&&validateSurname&&validatePartronymic&&validateBithday == true {

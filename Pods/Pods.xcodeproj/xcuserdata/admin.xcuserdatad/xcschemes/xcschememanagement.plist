@@ -4,11 +4,6 @@
 <dict>
 	<key>SchemeUserState</key>
 	<dict>
-		<key>AFDateHelper.xcscheme</key>
-		<dict>
-			<key>isShown</key>
-			<false/>
-		</dict>
 		<key>Pods-IronWaterTest.xcscheme</key>
 		<dict>
 			<key>isShown</key>
@@ -42,12 +37,7 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>146327C2CAC39F8D1511D55606981BFD</key>
-		<dict>
-			<key>primary</key>
-			<true/>
-		</dict>
-		<key>9ADF74A92DB37BCA9991356E7AC5F6FC</key>
+		<key>76A9D087C908839F22AFF29ED8407BAC</key>
 		<dict>
 			<key>primary</key>
 			<true/>
@@ -57,12 +47,12 @@
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>D9AB863F11860FD5FAB7356BF0A36E24</key>
+		<key>E65EA22B1AE965FC1E2EDB0241EF393B</key>
 		<dict>
 			<key>primary</key>
 			<true/>
 		</dict>
-		<key>E66E39B7A2D045C4E363B5E3B7B08F7F</key>
+		<key>EB71BF8781EBE8151CAE7DD132529EA5</key>
 		<dict>
 			<key>primary</key>
 			<true/>

@@ -25,8 +25,6 @@ class TableViewGender: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSo
         pickerView.dataSource = self
         editTextView.delegate = self
         super.awakeFromNib()
-      
-
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -52,12 +50,8 @@ class TableViewGender: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSo
         editTextView.text = genderValue[row]
         pickerView.isHidden  = true
         editTextView.isHidden = false
-        
     }
-    
-  
-   
-    
+
     func textViewDidBeginEditing(_ textView: UITextView) {
         if textView  == self.editTextView {
             editTextView.isHidden = true

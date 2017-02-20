@@ -70,18 +70,9 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
     
    
     @IBAction func SaveUserEdit(_ sender: Any) {
-      
        validData()
-       
     }
-    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
-         NotificationCenter.default.post(Notification(name:VALIDATE_NOTIFICATION))
-    }
-    
-    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-       NotificationCenter.default.post(Notification(name:VALIDATE_NOTIFICATION))
-    }
-   
+
     
 
 
@@ -111,16 +102,11 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
     }
     func validData(){
        
-   
-   
         if validateName&&validateSurname&&validatePartronymic&&validateBithday == true {
             Cache.UpdateUserEdit()
             print("ok!:)")
             print(userModelEdit)
-            
-  
             NotificationCenter.default.post(Notification(name:RELOAD_NOTIFICATION))
-           
             self.navigationController?.popViewController(animated: true)
             
         }
@@ -130,7 +116,6 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
             
             alertError.addAction(UIAlertAction(title: "OK", style: UIAlertActionStyle.default, handler: nil))
             self.present(alertError, animated: true, completion: nil)
-            
             print("ne ok!:)")
         }
 
@@ -143,8 +128,6 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
             return true
         }
         if user.userBithday != userModelEdit.userBithday {
-            print(user.userBithday)
-            print(userModelEdit.userBithday)
             return true
         }
         if user.userName != userModelEdit.userName {

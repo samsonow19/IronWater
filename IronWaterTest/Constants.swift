@@ -23,6 +23,4 @@ var validatePartronymic = true
 var validateBithday = true
 var userModelEdit =  UserModelEdit()
 
-
-let VALIDATE_NOTIFICATION =   Notification.Name(rawValue: "ValidateNotification")
 let RELOAD_NOTIFICATION = Notification.Name(rawValue: "ReloadNotification ")

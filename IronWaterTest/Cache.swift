@@ -26,7 +26,7 @@ class Cache {
     static func UpdateUserEdit() {
         
     let realm = try! Realm()
-    do{
+    do {
 
         let user = ModelUser()
         print(userModelEdit)
@@ -50,7 +50,6 @@ class Cache {
         if userCache.count == 0
         {
             let usermodel : ModelUser = ModelUser()
-        
             usermodel.userSurname = "Самсонов"
             usermodel.userName = "Женя"
             usermodel.userPartronymic = "Сергеевич"

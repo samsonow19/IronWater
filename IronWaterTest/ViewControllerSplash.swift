@@ -15,7 +15,6 @@ class ViewControllerSplash: UIViewController {
 
         perform(#selector(ViewControllerSplash.showNavigationContrioller), with: self, afterDelay: 4)
 
-     
     }
 
     override func didReceiveMemoryWarning() {

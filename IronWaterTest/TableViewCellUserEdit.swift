@@ -23,11 +23,7 @@ class TableViewCellUserEdit: UITableViewCell, UITextViewDelegate {
         self.addDoneButtonOnKeyboard()
         editText.delegate = self
         
-        // Initialization code
-        /*NotificationCenter.default.addObserver(forName: VALIDATE_NOTIFICATION, object: nil, queue: nil) { (Notification) in
-
-        }*/
-        
+  
         
     }
  
@@ -39,7 +35,6 @@ class TableViewCellUserEdit: UITableViewCell, UITextViewDelegate {
         super.setSelected(selected, animated: animated)
         validDateUser()
        
-        // Configure the view for the selected state
     }
     
     
@@ -85,14 +80,10 @@ class TableViewCellUserEdit: UITableViewCell, UITextViewDelegate {
             userModelEdit.userBithday = editText.text
             if validateBithday == true {
                 validateBithday = checkValidDate(textViewEdit: editText.text)
-                
             }
         }
-       
-        
     }
-    
- 
+
     
     func checkValid(textViewEdit: String) ->Bool {
         
@@ -111,6 +102,9 @@ class TableViewCellUserEdit: UITableViewCell, UITextViewDelegate {
         dateFormatter.locale = Locale(identifier:"en_US_POSIX")
         let datecomponents = dateFormatter.date(from: editText.text)
         print(editText.text)
+        if datecomponents == nil {
+            return false
+        }
         let now = Date()
             
         if (datecomponents! > now) {

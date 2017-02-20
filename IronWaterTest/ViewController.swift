@@ -17,30 +17,28 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     override func viewDidLoad() {
 
         user = Cache.GetUser()
+        addUsertoArray()
+        NotificationCenter.default.addObserver(forName: RELOAD_NOTIFICATION, object: nil, queue: nil) { (Notification) in
+         
+            let newUser  = Cache.GetUser()
+            print(newUser)
+            self.tableView.reloadData()
+            self.addUsertoArray()
+        }
+    }
+    func addUsertoArray() {
         array =  [String]()
         array.append(user.userName!)
         array.append(user.userSurname!)
         array.append(user.userPartronymic!)
         array.append(user.userBithday!)
         array.append(user.iserGender!)
-        NotificationCenter.default.addObserver(forName: RELOAD_NOTIFICATION, object: nil, queue: nil) { (Notification) in
-            //print(self.array)
-            let newUser  = Cache.GetUser()
-            print(newUser)
-            //print(self.user)
-            self.tableView.reloadData()
-            var array1 = [String]()
-            array1.append(newUser.userName!)
-            array1.append(newUser.userSurname!)
-            array1.append(newUser.userPartronymic!)
-            array1.append(newUser.userBithday!)
-            array1.append(newUser.iserGender!)
-            self.array = array1
-            
-            
-        }
     }
     
+    
+    deinit {
+        NotificationCenter.default.removeObserver(self)
+    }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

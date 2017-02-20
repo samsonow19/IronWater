@@ -7,7 +7,7 @@
 //
 
 import UIKit
-import RealmSwift
+
 class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewDelegate {
 
     var arrayConst: [String]  = ["Имя","Фамилия","Отчество","Дата Рождения","Пол"]
@@ -70,7 +70,9 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
     
    
     @IBAction func SaveUserEdit(_ sender: Any) {
+      
        validData()
+       
     }
     
 
@@ -83,6 +85,7 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
             
             alertError.addAction(UIAlertAction(title: "Сохранить", style: UIAlertActionStyle.default, handler:{ (UIAlertAction) in
                 self.validData()
+               // Cache.UpdateUser(user: userModelEdit)
 
             }))
             
@@ -105,9 +108,10 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
             
             print("ok!:)")
             print(userModelEdit)
-            Cache.UpdateUser(user: userModelEdit)
-
+            
+  
             NotificationCenter.default.post(Notification(name:RELOAD_NOTIFICATION))
+           
             self.navigationController?.popViewController(animated: true)
             
         }

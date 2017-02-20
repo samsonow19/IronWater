@@ -8,11 +8,20 @@
 
 import Foundation
 
+struct UserModelEdit {
+   
+    var userName: String? = nil
+    var userSurname: String? = nil
+    var userPartronymic: String? = nil
+    var userBithday : String? = nil
+    var iserGender: String? = nil
+}
+
 var validateName = true
 var validateSurname = true
 var validatePartronymic = true
 var validateBithday = true
-var userModelEdit =  ModelUser()
+var userModelEdit =  UserModelEdit()
 
 
 let VALIDATE_NOTIFICATION =   Notification.Name(rawValue: "ValidateNotification")

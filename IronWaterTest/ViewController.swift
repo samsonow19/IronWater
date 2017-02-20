@@ -24,17 +24,20 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         array.append(user.userBithday!)
         array.append(user.iserGender!)
         NotificationCenter.default.addObserver(forName: RELOAD_NOTIFICATION, object: nil, queue: nil) { (Notification) in
-           
-              let newUser  = Cache.GetUser()
-            print(self.user)
-            self.array.removeAll()
-              self.tableView.reloadData()
-            self.array.append(newUser.userName!)
-            self.array.append(newUser.userSurname!)
-            self.array.append(newUser.userPartronymic!)
-            self.array.append(newUser.userBithday!)
-            self.array.append(newUser.iserGender!)
-             print(self.array)
+            //print(self.array)
+            let newUser  = Cache.GetUser()
+            print(newUser)
+            //print(self.user)
+            self.tableView.reloadData()
+            var array1 = [String]()
+            array1.append(newUser.userName!)
+            array1.append(newUser.userSurname!)
+            array1.append(newUser.userPartronymic!)
+            array1.append(newUser.userBithday!)
+            array1.append(newUser.iserGender!)
+            self.array = array1
+            
+            
         }
     }
     
@@ -43,9 +46,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         super.didReceiveMemoryWarning()
      
     }
-    deinit {
-        NotificationCenter.default.removeObserver(self)
-    }
+  
     
     
     func numberOfSections(in tableView: UITableView) -> Int {

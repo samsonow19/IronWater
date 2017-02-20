@@ -23,6 +23,26 @@ class Cache {
        
     
     }
+    static func UpdateUserEdit() {
+        
+    let realm = try! Realm()
+    do{
+
+        let user = ModelUser()
+        print(userModelEdit)
+        user.iserGender = userModelEdit.iserGender
+        user.userBithday  = userModelEdit.userBithday
+        user.userName = userModelEdit.userName
+        user.userPartronymic = userModelEdit.userPartronymic
+        user.userSurname = userModelEdit.userSurname
+        try! realm.write {
+        
+    
+            realm.add(user, update: true)
+        }   
+    }
+        
+    }
 
     static func GetUser()->ModelUser {
         let realm = try! Realm()

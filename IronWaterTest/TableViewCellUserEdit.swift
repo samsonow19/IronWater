@@ -24,37 +24,19 @@ class TableViewCellUserEdit: UITableViewCell {
         // Initialization code
         NotificationCenter.default.addObserver(forName: VALIDATE_NOTIFICATION, object: nil, queue: nil) { (Notification) in
             self.validDateUser()
+         
             
         }
         
         
     }
-    deinit {
-  //      NotificationCenter.default.removeObserver(self)
-    }
+ 
     
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
         
-        if labelText.text == "Имя" {
-         
-            userModelEdit.userName = editText.text
-        }
-        if labelText.text == "Фамилия" {
-         
-            userModelEdit.userSurname = editText.text
-        }
-        if labelText.text == "Отчество" {
        
-            userModelEdit.userPartronymic = editText.text
-        }
-        if labelText.text == "Дата Рождения" {
-         
-            userModelEdit.userBithday = editText.text
-        
-        }
-
         // Configure the view for the selected state
     }
     
@@ -86,6 +68,7 @@ class TableViewCellUserEdit: UITableViewCell {
         if labelText.text == "Имя" {
             validateName = checkValid(textViewEdit: editText.text)
             userModelEdit.userName = editText.text
+            print(editText.text)
         }
         if labelText.text == "Фамилия" {
             validateSurname = checkValid(textViewEdit: editText.text)
@@ -103,7 +86,7 @@ class TableViewCellUserEdit: UITableViewCell {
                 
             }
         }
-       
+        Cache.UpdateUserEdit()
         
     }
     

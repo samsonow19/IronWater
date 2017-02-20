@@ -24,3 +24,5 @@ var validateBithday = true
 var userModelEdit =  UserModelEdit()
 
 let RELOAD_NOTIFICATION = Notification.Name(rawValue: "ReloadNotification ")
+
+let RELOAD_CELL_NOTIFICATION = Notification.Name(rawValue: "ReloadCellNotification ")

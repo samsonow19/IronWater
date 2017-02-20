@@ -20,20 +20,14 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="HwL-J6-HHj">
-                        <rect key="frame" x="16" y="16" width="154.5" height="40"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="40" id="HXl-w9-5Vs"/>
-                        </constraints>
+                        <rect key="frame" x="16" y="16" width="154" height="21"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Text" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="zc5-aa-N3q">
-                        <rect key="frame" x="204.5" y="16" width="154.5" height="40"/>
+                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" scrollEnabled="NO" text="Text" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="zc5-aa-N3q">
+                        <rect key="frame" x="204.5" y="16" width="154.5" height="73.5"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="40" id="Ok6-lS-xtB"/>
-                        </constraints>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
@@ -42,6 +36,7 @@
                 <constraints>
                     <constraint firstAttribute="trailingMargin" secondItem="zc5-aa-N3q" secondAttribute="trailing" constant="8" id="5J9-P9-rP6"/>
                     <constraint firstItem="HwL-J6-HHj" firstAttribute="top" secondItem="UtI-VJ-2ck" secondAttribute="topMargin" constant="8" id="GZx-Ql-b7l"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="zc5-aa-N3q" secondAttribute="bottom" constant="8" id="L2U-d8-6fm"/>
                     <constraint firstItem="HwL-J6-HHj" firstAttribute="width" secondItem="zc5-aa-N3q" secondAttribute="width" id="avF-3C-X9q"/>
                     <constraint firstItem="HwL-J6-HHj" firstAttribute="leading" secondItem="UtI-VJ-2ck" secondAttribute="leadingMargin" constant="8" id="bkh-aR-Pp4"/>
                     <constraint firstItem="zc5-aa-N3q" firstAttribute="top" secondItem="UtI-VJ-2ck" secondAttribute="topMargin" constant="8" id="xOt-ka-vqB"/>

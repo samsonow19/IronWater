@@ -148,6 +148,9 @@
                             </connections>
                         </barButtonItem>
                     </navigationItem>
+                    <connections>
+                        <outlet property="tabelViewEdit" destination="pKl-um-Eee" id="72I-Yr-ew3"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="buS-Mv-adc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

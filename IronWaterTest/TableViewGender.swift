@@ -54,6 +54,8 @@ class TableViewGender: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSo
         editTextView.isHidden = false
         
     }
+    
+  
    
     
     func textViewDidBeginEditing(_ textView: UITextView) {

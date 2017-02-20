@@ -16,23 +16,17 @@
             <rect key="frame" x="0.0" y="0.0" width="395" height="131"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="hZ9-e0-fLj" id="NB5-8o-4Kj">
-                <rect key="frame" x="0.0" y="0.0" width="395" height="131"/>
+                <rect key="frame" x="0.0" y="0.0" width="395" height="130"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvo-Nz-nub">
-                        <rect key="frame" x="16" y="16" width="164" height="40"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="40" id="FnT-NA-Wpr"/>
-                        </constraints>
+                        <rect key="frame" x="16" y="16" width="164" height="20.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="right" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="K5l-zv-VIe">
-                        <rect key="frame" x="215" y="16" width="164" height="40"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="40" id="BMs-ua-wLk"/>
-                        </constraints>
+                        <rect key="frame" x="215" y="16" width="164" height="98.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <nil key="highlightedColor"/>
@@ -42,6 +36,7 @@
                     <constraint firstItem="vvo-Nz-nub" firstAttribute="leading" secondItem="NB5-8o-4Kj" secondAttribute="leadingMargin" constant="8" id="5PJ-ki-NyU"/>
                     <constraint firstItem="K5l-zv-VIe" firstAttribute="top" secondItem="NB5-8o-4Kj" secondAttribute="topMargin" constant="8" id="9Rn-HR-shZ"/>
                     <constraint firstItem="K5l-zv-VIe" firstAttribute="leading" secondItem="vvo-Nz-nub" secondAttribute="trailing" constant="35" id="KhK-n2-3MP"/>
+                    <constraint firstAttribute="bottomMargin" secondItem="K5l-zv-VIe" secondAttribute="bottom" constant="8" id="TWi-2I-57G"/>
                     <constraint firstAttribute="trailingMargin" secondItem="K5l-zv-VIe" secondAttribute="trailing" constant="8" id="p3I-Mf-THF"/>
                     <constraint firstItem="vvo-Nz-nub" firstAttribute="width" secondItem="K5l-zv-VIe" secondAttribute="width" id="tDd-QE-ngx"/>
                     <constraint firstItem="vvo-Nz-nub" firstAttribute="top" secondItem="NB5-8o-4Kj" secondAttribute="topMargin" constant="8" id="we6-kE-h1M"/>

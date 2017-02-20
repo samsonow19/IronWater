@@ -15,7 +15,9 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     @IBOutlet weak var tableView: UITableView!
     var  user : ModelUser!
     override func viewDidLoad() {
-
+        
+        tableView.rowHeight = UITableViewAutomaticDimension
+        tableView.estimatedRowHeight = 50.0
         user = Cache.GetUser()
         addUsertoArray()
         NotificationCenter.default.addObserver(forName: RELOAD_NOTIFICATION, object: nil, queue: nil) { (Notification) in
@@ -69,7 +71,7 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         
-        return 70
+        return UITableViewAutomaticDimension
     }
  
 

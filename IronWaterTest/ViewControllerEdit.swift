@@ -12,9 +12,12 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
 
     var arrayConst: [String]  = ["Имя","Фамилия","Отчество","Дата Рождения","Пол"]
     var array: [String]!
+    
+    @IBOutlet weak var tabelViewEdit: UITableView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        
+        tabelViewEdit.rowHeight = UITableViewAutomaticDimension
         let  user : ModelUser = Cache.GetUser()
         array =  [String]()
         array.append(user.userName!)
@@ -22,6 +25,24 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
         array.append(user.userPartronymic!)
         array.append(user.userBithday!)
         array.append(user.iserGender!)
+        
+        NotificationCenter.default.addObserver(forName: RELOAD_CELL_NOTIFICATION, object: nil, queue: nil) { (Notification) in
+            
+            UIView.setAnimationsEnabled(false) // Disable animations
+            self.tabelViewEdit.beginUpdates()
+            self.tabelViewEdit.endUpdates()
+            
+            // Might need to insert additional stuff here if scrolls
+            // table in an unexpected way.  This scrolls to the bottom
+            // of the table. (Though you might need something more
+            // complicated if editing in the middle.)
+            
+            let scrollTo = self.tabelViewEdit.contentSize.height - self.tabelViewEdit.frame.size.height
+          
+            self.tabelViewEdit.setContentOffset( CGPoint(x: 0, y: scrollTo), animated: false)
+            
+            UIView.setAnimationsEnabled(true)
+        }
         
     }
 
@@ -38,6 +59,8 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
         
         return arrayConst.count
     }
+    
+
     
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -59,14 +82,19 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
         
     }
     
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
+    func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
+        return UITableViewAutomaticDimension
+    }
+    
     
     
   
     
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
-        return 70
-    }
+   
     
    
     @IBAction func SaveUserEdit(_ sender: Any) {
@@ -141,6 +169,10 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
         }
         return false
     }
+    
+    
+   
+
 
   
 

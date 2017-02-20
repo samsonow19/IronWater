@@ -23,12 +23,34 @@ class TableViewCellUserEdit: UITableViewCell, UITextViewDelegate {
         self.addDoneButtonOnKeyboard()
         editText.delegate = self
         
+        
   
         
     }
+    
+    
+    
+  
+    
+    
+    
+    
  
     func textViewDidChange(_ textView: UITextView) {
          self.validDateUser()
+        
+        
+        
+        let startHeight = textView.frame.size.height
+        let calcHeight = textView.sizeThatFits(textView.frame.size).height  //iOS 8+ only
+        
+        if startHeight != calcHeight {
+            NotificationCenter.default.post(Notification(name:RELOAD_CELL_NOTIFICATION))
+           
+        }
+        
+
+        
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
@@ -57,6 +79,7 @@ class TableViewCellUserEdit: UITableViewCell, UITextViewDelegate {
     func doneButtonAction() {
         self.editText.resignFirstResponder()
     }
+    
     
     
     

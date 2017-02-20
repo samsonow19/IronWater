@@ -74,6 +74,14 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
        validData()
        
     }
+    func tableView(_ tableView: UITableView, didDeselectRowAt indexPath: IndexPath) {
+         NotificationCenter.default.post(Notification(name:VALIDATE_NOTIFICATION))
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+       NotificationCenter.default.post(Notification(name:VALIDATE_NOTIFICATION))
+    }
+   
     
 
 
@@ -85,7 +93,7 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
             
             alertError.addAction(UIAlertAction(title: "Сохранить", style: UIAlertActionStyle.default, handler:{ (UIAlertAction) in
                 self.validData()
-               // Cache.UpdateUser(user: userModelEdit)
+              
 
             }))
             
@@ -102,10 +110,11 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
         
     }
     func validData(){
-        NotificationCenter.default.post(Notification(name:VALIDATE_NOTIFICATION))
-        
+       
+   
+   
         if validateName&&validateSurname&&validatePartronymic&&validateBithday == true {
-            
+            Cache.UpdateUserEdit()
             print("ok!:)")
             print(userModelEdit)
             

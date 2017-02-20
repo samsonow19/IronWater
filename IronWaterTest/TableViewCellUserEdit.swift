@@ -9,7 +9,7 @@
 import UIKit
 
 
-class TableViewCellUserEdit: UITableViewCell {
+class TableViewCellUserEdit: UITableViewCell, UITextViewDelegate {
     @IBOutlet weak var labelText: UILabel!
 
     @IBOutlet weak var editText: UITextView!
@@ -21,21 +21,23 @@ class TableViewCellUserEdit: UITableViewCell {
         super.awakeFromNib()
 
         self.addDoneButtonOnKeyboard()
+        editText.delegate = self
+        
         // Initialization code
-        NotificationCenter.default.addObserver(forName: VALIDATE_NOTIFICATION, object: nil, queue: nil) { (Notification) in
-            self.validDateUser()
-         
-            
-        }
+        /*NotificationCenter.default.addObserver(forName: VALIDATE_NOTIFICATION, object: nil, queue: nil) { (Notification) in
+
+        }*/
         
         
     }
  
-    
+    func textViewDidChange(_ textView: UITextView) {
+         self.validDateUser()
+    }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        
+        validDateUser()
        
         // Configure the view for the selected state
     }
@@ -86,7 +88,7 @@ class TableViewCellUserEdit: UITableViewCell {
                 
             }
         }
-        Cache.UpdateUserEdit()
+       
         
     }
     

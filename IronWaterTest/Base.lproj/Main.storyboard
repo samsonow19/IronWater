@@ -128,10 +128,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstItem="pKl-um-Eee" firstAttribute="leading" secondItem="2dW-gW-eEM" secondAttribute="leadingMargin" constant="8" id="IAB-QA-mM7"/>
-                            <constraint firstAttribute="trailingMargin" secondItem="pKl-um-Eee" secondAttribute="trailing" constant="8" id="KZD-rK-pq6"/>
-                            <constraint firstItem="pKl-um-Eee" firstAttribute="top" secondItem="2dW-gW-eEM" secondAttribute="topMargin" constant="8" id="l7t-V6-pds"/>
-                            <constraint firstItem="c0i-7l-Iht" firstAttribute="top" secondItem="pKl-um-Eee" secondAttribute="bottom" constant="8" id="nW7-L0-gf4"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="pKl-um-Eee" secondAttribute="trailing" constant="8" id="AYv-3s-z3y"/>
+                            <constraint firstItem="pKl-um-Eee" firstAttribute="top" secondItem="2dW-gW-eEM" secondAttribute="topMargin" constant="8" id="BsO-Ic-Ay8"/>
+                            <constraint firstItem="pKl-um-Eee" firstAttribute="leading" secondItem="2dW-gW-eEM" secondAttribute="leadingMargin" constant="8" id="GU9-Ib-IX8"/>
+                            <constraint firstItem="c0i-7l-Iht" firstAttribute="top" secondItem="pKl-um-Eee" secondAttribute="bottom" constant="8" id="s3a-pK-zUl"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Редактирование" id="duC-Dv-m1G">

@@ -22,11 +22,14 @@
 		847D546B1E586135001A1C4F /* TableViewCellUser.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847D546A1E586135001A1C4F /* TableViewCellUser.xib */; };
 		847D546F1E586284001A1C4F /* TableViewCellUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D546E1E586284001A1C4F /* TableViewCellUser.swift */; };
 		847D54731E586787001A1C4F /* ViewControllerSplash.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D54721E586787001A1C4F /* ViewControllerSplash.swift */; };
-		847D54781E587562001A1C4F /* ModelUser.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D54771E587562001A1C4F /* ModelUser.swift */; };
-		847D547A1E5879AC001A1C4F /* Cache.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D54791E5879AC001A1C4F /* Cache.swift */; };
 		847D547E1E588668001A1C4F /* TableViewCellEdit.xib in Resources */ = {isa = PBXBuildFile; fileRef = 847D547D1E588668001A1C4F /* TableViewCellEdit.xib */; };
 		847D54801E588C31001A1C4F /* TableViewCellUserEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D547F1E588C31001A1C4F /* TableViewCellUserEdit.swift */; };
 		847D54821E588D0E001A1C4F /* ViewControllerEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 847D54811E588D0E001A1C4F /* ViewControllerEdit.swift */; };
+		8486A09F1E5C1DBD008794C4 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486A09E1E5C1DBD008794C4 /* UserModel.swift */; };
+		8486A0A11E5C4A59008794C4 /* TebleViewCellDate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8486A0A01E5C4A59008794C4 /* TebleViewCellDate.xib */; };
+		8486A0A31E5C4B55008794C4 /* TableViewCellDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486A0A21E5C4B55008794C4 /* TableViewCellDate.swift */; };
+		8486A0A51E5C5B78008794C4 /* TableCellDate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8486A0A41E5C5B78008794C4 /* TableCellDate.xib */; };
+		8486A0A71E5C5BC7008794C4 /* TableCellDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486A0A61E5C5BC7008794C4 /* TableCellDate.swift */; };
 		C73B9AC4B11355734FD175B9 /* Pods_IronWaterTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B670814A59702FDE6201BFAB /* Pods_IronWaterTestUITests.framework */; };
 /* End PBXBuildFile section */
 
@@ -71,11 +74,14 @@
 		847D546A1E586135001A1C4F /* TableViewCellUser.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellUser.xib; sourceTree = "<group>"; };
 		847D546E1E586284001A1C4F /* TableViewCellUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellUser.swift; sourceTree = "<group>"; };
 		847D54721E586787001A1C4F /* ViewControllerSplash.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerSplash.swift; sourceTree = "<group>"; };
-		847D54771E587562001A1C4F /* ModelUser.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ModelUser.swift; sourceTree = "<group>"; };
-		847D54791E5879AC001A1C4F /* Cache.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Cache.swift; sourceTree = "<group>"; };
 		847D547D1E588668001A1C4F /* TableViewCellEdit.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewCellEdit.xib; sourceTree = "<group>"; };
 		847D547F1E588C31001A1C4F /* TableViewCellUserEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellUserEdit.swift; sourceTree = "<group>"; };
 		847D54811E588D0E001A1C4F /* ViewControllerEdit.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ViewControllerEdit.swift; sourceTree = "<group>"; };
+		8486A09E1E5C1DBD008794C4 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
+		8486A0A01E5C4A59008794C4 /* TebleViewCellDate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TebleViewCellDate.xib; sourceTree = "<group>"; };
+		8486A0A21E5C4B55008794C4 /* TableViewCellDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellDate.swift; sourceTree = "<group>"; };
+		8486A0A41E5C5B78008794C4 /* TableCellDate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCellDate.xib; sourceTree = "<group>"; };
+		8486A0A61E5C5BC7008794C4 /* TableCellDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellDate.swift; sourceTree = "<group>"; };
 		9A7520B8A8A65EE29B6756A6 /* Pods-IronWaterTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IronWaterTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IronWaterTest/Pods-IronWaterTest.debug.xcconfig"; sourceTree = "<group>"; };
 		A04663FD4E24BC95362E86C7 /* Pods-IronWaterTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IronWaterTestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IronWaterTestUITests/Pods-IronWaterTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		B670814A59702FDE6201BFAB /* Pods_IronWaterTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IronWaterTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -169,7 +175,6 @@
 				847D54441E585AD3001A1C4F /* LaunchScreen.storyboard */,
 				847D54471E585AD3001A1C4F /* Info.plist */,
 				847D54721E586787001A1C4F /* ViewControllerSplash.swift */,
-				847D54791E5879AC001A1C4F /* Cache.swift */,
 				844D83711E59B33F00DFA006 /* Constants.swift */,
 			);
 			path = IronWaterTest;
@@ -202,6 +207,10 @@
 				847D547F1E588C31001A1C4F /* TableViewCellUserEdit.swift */,
 				844D836B1E5983B900DFA006 /* TableViewGender.xib */,
 				844D836F1E59890200DFA006 /* TableViewGender.swift */,
+				8486A0A01E5C4A59008794C4 /* TebleViewCellDate.xib */,
+				8486A0A21E5C4B55008794C4 /* TableViewCellDate.swift */,
+				8486A0A41E5C5B78008794C4 /* TableCellDate.xib */,
+				8486A0A61E5C5BC7008794C4 /* TableCellDate.swift */,
 			);
 			name = xib;
 			sourceTree = "<group>";
@@ -209,7 +218,7 @@
 		847D54761E587549001A1C4F /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				847D54771E587562001A1C4F /* ModelUser.swift */,
+				8486A09E1E5C1DBD008794C4 /* UserModel.swift */,
 			);
 			name = Model;
 			sourceTree = "<group>";
@@ -330,12 +339,14 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8486A0A51E5C5B78008794C4 /* TableCellDate.xib in Resources */,
 				847D546B1E586135001A1C4F /* TableViewCellUser.xib in Resources */,
 				844D836C1E5983B900DFA006 /* TableViewGender.xib in Resources */,
 				847D54461E585AD3001A1C4F /* LaunchScreen.storyboard in Resources */,
 				847D54431E585AD3001A1C4F /* Assets.xcassets in Resources */,
 				847D54411E585AD3001A1C4F /* Main.storyboard in Resources */,
 				847D547E1E588668001A1C4F /* TableViewCellEdit.xib in Resources */,
+				8486A0A11E5C4A59008794C4 /* TebleViewCellDate.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -499,15 +510,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				844D83701E59890200DFA006 /* TableViewGender.swift in Sources */,
+				8486A0A31E5C4B55008794C4 /* TableViewCellDate.swift in Sources */,
 				847D54821E588D0E001A1C4F /* ViewControllerEdit.swift in Sources */,
 				847D543E1E585AD3001A1C4F /* ViewController.swift in Sources */,
 				847D54801E588C31001A1C4F /* TableViewCellUserEdit.swift in Sources */,
 				847D546F1E586284001A1C4F /* TableViewCellUser.swift in Sources */,
 				844D83721E59B33F00DFA006 /* Constants.swift in Sources */,
-				847D54781E587562001A1C4F /* ModelUser.swift in Sources */,
 				847D543C1E585AD3001A1C4F /* AppDelegate.swift in Sources */,
-				847D547A1E5879AC001A1C4F /* Cache.swift in Sources */,
 				847D54731E586787001A1C4F /* ViewControllerSplash.swift in Sources */,
+				8486A09F1E5C1DBD008794C4 /* UserModel.swift in Sources */,
+				8486A0A71E5C5BC7008794C4 /* TableCellDate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

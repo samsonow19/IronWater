@@ -8,21 +8,7 @@
 
 import Foundation
 
-struct UserModelEdit {
-   
-    var userName: String? = nil
-    var userSurname: String? = nil
-    var userPartronymic: String? = nil
-    var userBithday : String? = nil
-    var iserGender: String? = nil
-}
+let ADD_HEIDHT_CELL_NOTIFICATION = Notification.Name(rawValue: "ReloadCellNotification") // add height after add text
+let HIDE_SHOW_CELL_WITH_DATE_PICKER  = Notification.Name(rawValue: "ReloadCellDateNotification")//swow/hide Date Picker
+let UPDATE_DATE_TO_CELL_NOTIFICATION = Notification.Name(rawValue: "UpdateDateToCellNotification") // update cell text after Date Picker
 
-var validateName = true
-var validateSurname = true
-var validatePartronymic = true
-var validateBithday = true
-var userModelEdit =  UserModelEdit()
-
-let RELOAD_NOTIFICATION = Notification.Name(rawValue: "ReloadNotification ")
-
-let RELOAD_CELL_NOTIFICATION = Notification.Name(rawValue: "ReloadCellNotification ")

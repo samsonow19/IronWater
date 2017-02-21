@@ -15,12 +15,10 @@ class TableViewGender: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSo
     @IBOutlet weak var pickerView: UIPickerView!
     
     @IBOutlet weak var editTextView: UITextView!
-    
-    
-    var genderValue = ["мужской","женский"]
+
+    var genderValue = ["Не указан","мужской","женский"]
     
     override func awakeFromNib() {
-        
         pickerView.delegate = self
         pickerView.dataSource = self
         editTextView.delegate = self
@@ -29,15 +27,13 @@ class TableViewGender: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSo
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        userModelEdit.iserGender  = editTextView.text
+        UserModel.sharedInstance.userGender = editTextView.text
     }
-   
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
         return 1
     }
-    
-    
+
     func pickerView(_ pickerView: UIPickerView, numberOfRowsInComponent component: Int) -> Int {
         return genderValue.count
     }
@@ -50,6 +46,7 @@ class TableViewGender: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSo
         editTextView.text = genderValue[row]
         pickerView.isHidden  = true
         editTextView.isHidden = false
+        UserModel.sharedInstance.userGender = editTextView.text
     }
 
     func textViewDidBeginEditing(_ textView: UITextView) {
@@ -57,9 +54,7 @@ class TableViewGender: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSo
             editTextView.isHidden = true
             self.pickerView.isHidden = false
             editTextView.endEditing(true)
-            userModelEdit.iserGender  = editTextView.text
-            
-            
+            print(editTextView.text)
         }
     }
     

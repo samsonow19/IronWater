@@ -9,44 +9,35 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate  {
-    var arrayConst: [String]  = ["Имя","Фамилия","Отчество","Дата Рождения","Пол"]
-    var array: [String]!
-    var pickheight: CGFloat = 0.0
+   
     @IBOutlet weak var tableView: UITableView!
-    var  user : ModelUser!
+
+    var arrayConst: [String]  = ["Имя","Фамилия","Отчество","Дата Рождения","Пол"]
+    var userDate = [NSString]()
+    
     override func viewDidLoad() {
-        
         tableView.rowHeight = UITableViewAutomaticDimension
         tableView.estimatedRowHeight = 50.0
-        user = Cache.GetUser()
-        addUsertoArray()
-        NotificationCenter.default.addObserver(forName: RELOAD_NOTIFICATION, object: nil, queue: nil) { (Notification) in
-         
-            let newUser  = Cache.GetUser()
-            print(newUser)
-            self.tableView.reloadData()
-            self.addUsertoArray()
+        let userDateDafaults  = UserDefaults.standard
+        let  getValue = userDateDafaults.object(forKey: "UserList")
+        if getValue == nil {
+            userDate.append("Женя")
+            userDate.append("Самсонов")
+            userDate.append("Сергеевич")
+            userDate.append("23.09.1993")
+            userDate.append("мужской")
+            userDateDafaults.set(userDate, forKey: "UserList")
+            userDateDafaults.synchronize()
         }
+        else {
+            userDate = getValue as! [NSString]
+        }
+        UserModel.sharedInstance.modelFromArray(array: userDate )
     }
-    func addUsertoArray() {
-        array =  [String]()
-        array.append(user.userName!)
-        array.append(user.userSurname!)
-        array.append(user.userPartronymic!)
-        array.append(user.userBithday!)
-        array.append(user.iserGender!)
-    }
-    
     
     deinit {
         NotificationCenter.default.removeObserver(self)
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-     
-    }
-
     
     func numberOfSections(in tableView: UITableView) -> Int {
         return 1
@@ -57,22 +48,26 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         return arrayConst.count
     }
 
-
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       
-        let cell = Bundle.main.loadNibNamed("TableViewCellUser", owner: self, options: nil)?.first as! TableViewCellUser
-        print(array)
+        let cell = Bundle.main.loadNibNamed("TableViewCellUser",
+                                            owner: self, options: nil)?.first
+                                            as! TableViewCellUser
         cell.constLabel.text = arrayConst[indexPath.row]
-        cell.editLabel.text = array[indexPath.row]
-
+        cell.editLabel.text = userDate[indexPath.row] as String
         return cell
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        
         return UITableViewAutomaticDimension
     }
- 
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        tableView.reloadData()
+        let userDateDafaults  = UserDefaults.standard
+        let  getValue = userDateDafaults.object(forKey: "UserList")
+        userDate = getValue as! [NSString]
+    }
 
 }
 

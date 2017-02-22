@@ -1,6 +1,0 @@
-framework module Pods_IronWaterTestTests {
-  umbrella header "Pods-IronWaterTestTests-umbrella.h"
-
-  export *
-  module * { export * }
-}

@@ -7,8 +7,6 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		081441D24E42EB0DA902E294 /* Pods_IronWaterTest.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 554B6755FB92E7B99256DA9D /* Pods_IronWaterTest.framework */; };
-		4EF2C6413ADCB4A507AB40EE /* Pods_IronWaterTestTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = DA93C044FE0714ED8E950212 /* Pods_IronWaterTestTests.framework */; };
 		844D836C1E5983B900DFA006 /* TableViewGender.xib in Resources */ = {isa = PBXBuildFile; fileRef = 844D836B1E5983B900DFA006 /* TableViewGender.xib */; };
 		844D83701E59890200DFA006 /* TableViewGender.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D836F1E59890200DFA006 /* TableViewGender.swift */; };
 		844D83721E59B33F00DFA006 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 844D83711E59B33F00DFA006 /* Constants.swift */; };
@@ -30,7 +28,6 @@
 		8486A0A31E5C4B55008794C4 /* TableViewCellDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486A0A21E5C4B55008794C4 /* TableViewCellDate.swift */; };
 		8486A0A51E5C5B78008794C4 /* TableCellDate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8486A0A41E5C5B78008794C4 /* TableCellDate.xib */; };
 		8486A0A71E5C5BC7008794C4 /* TableCellDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486A0A61E5C5BC7008794C4 /* TableCellDate.swift */; };
-		C73B9AC4B11355734FD175B9 /* Pods_IronWaterTestUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B670814A59702FDE6201BFAB /* Pods_IronWaterTestUITests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -51,10 +48,6 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		3FBBFEB1EDBEF8178106522E /* Pods-IronWaterTestTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IronWaterTestTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IronWaterTestTests/Pods-IronWaterTestTests.debug.xcconfig"; sourceTree = "<group>"; };
-		40E1419C71AF891B9FABDACC /* Pods-IronWaterTest.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IronWaterTest.release.xcconfig"; path = "Pods/Target Support Files/Pods-IronWaterTest/Pods-IronWaterTest.release.xcconfig"; sourceTree = "<group>"; };
-		51EE4DC96D5306EC4D4B0A30 /* Pods-IronWaterTestUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IronWaterTestUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IronWaterTestUITests/Pods-IronWaterTestUITests.release.xcconfig"; sourceTree = "<group>"; };
-		554B6755FB92E7B99256DA9D /* Pods_IronWaterTest.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IronWaterTest.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		844D836B1E5983B900DFA006 /* TableViewGender.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableViewGender.xib; sourceTree = "<group>"; };
 		844D836F1E59890200DFA006 /* TableViewGender.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewGender.swift; sourceTree = "<group>"; };
 		844D83711E59B33F00DFA006 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
@@ -82,11 +75,6 @@
 		8486A0A21E5C4B55008794C4 /* TableViewCellDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellDate.swift; sourceTree = "<group>"; };
 		8486A0A41E5C5B78008794C4 /* TableCellDate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCellDate.xib; sourceTree = "<group>"; };
 		8486A0A61E5C5BC7008794C4 /* TableCellDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellDate.swift; sourceTree = "<group>"; };
-		9A7520B8A8A65EE29B6756A6 /* Pods-IronWaterTest.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IronWaterTest.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IronWaterTest/Pods-IronWaterTest.debug.xcconfig"; sourceTree = "<group>"; };
-		A04663FD4E24BC95362E86C7 /* Pods-IronWaterTestUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IronWaterTestUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-IronWaterTestUITests/Pods-IronWaterTestUITests.debug.xcconfig"; sourceTree = "<group>"; };
-		B670814A59702FDE6201BFAB /* Pods_IronWaterTestUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IronWaterTestUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		C1127C0A56C65E52C2492C2B /* Pods-IronWaterTestTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-IronWaterTestTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-IronWaterTestTests/Pods-IronWaterTestTests.release.xcconfig"; sourceTree = "<group>"; };
-		DA93C044FE0714ED8E950212 /* Pods_IronWaterTestTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_IronWaterTestTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -94,7 +82,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				081441D24E42EB0DA902E294 /* Pods_IronWaterTest.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -102,7 +89,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4EF2C6413ADCB4A507AB40EE /* Pods_IronWaterTestTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -110,36 +96,12 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C73B9AC4B11355734FD175B9 /* Pods_IronWaterTestUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		45564DF531DD87BFE5C51AF0 /* Pods */ = {
-			isa = PBXGroup;
-			children = (
-				9A7520B8A8A65EE29B6756A6 /* Pods-IronWaterTest.debug.xcconfig */,
-				40E1419C71AF891B9FABDACC /* Pods-IronWaterTest.release.xcconfig */,
-				3FBBFEB1EDBEF8178106522E /* Pods-IronWaterTestTests.debug.xcconfig */,
-				C1127C0A56C65E52C2492C2B /* Pods-IronWaterTestTests.release.xcconfig */,
-				A04663FD4E24BC95362E86C7 /* Pods-IronWaterTestUITests.debug.xcconfig */,
-				51EE4DC96D5306EC4D4B0A30 /* Pods-IronWaterTestUITests.release.xcconfig */,
-			);
-			name = Pods;
-			sourceTree = "<group>";
-		};
-		4C0DDCDCF123E2B89305F42E /* Frameworks */ = {
-			isa = PBXGroup;
-			children = (
-				554B6755FB92E7B99256DA9D /* Pods_IronWaterTest.framework */,
-				DA93C044FE0714ED8E950212 /* Pods_IronWaterTestTests.framework */,
-				B670814A59702FDE6201BFAB /* Pods_IronWaterTestUITests.framework */,
-			);
-			name = Frameworks;
-			sourceTree = "<group>";
-		};
 		847D542F1E585AD3001A1C4F = {
 			isa = PBXGroup;
 			children = (
@@ -147,8 +109,6 @@
 				847D544F1E585AD4001A1C4F /* IronWaterTestTests */,
 				847D545A1E585AD4001A1C4F /* IronWaterTestUITests */,
 				847D54391E585AD3001A1C4F /* Products */,
-				45564DF531DD87BFE5C51AF0 /* Pods */,
-				4C0DDCDCF123E2B89305F42E /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -230,12 +190,9 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 847D54601E585AD4001A1C4F /* Build configuration list for PBXNativeTarget "IronWaterTest" */;
 			buildPhases = (
-				C80AE54CAEEB4F855A64DEA1 /* [CP] Check Pods Manifest.lock */,
 				847D54341E585AD3001A1C4F /* Sources */,
 				847D54351E585AD3001A1C4F /* Frameworks */,
 				847D54361E585AD3001A1C4F /* Resources */,
-				D6203E5ECF2C632634D70299 /* [CP] Embed Pods Frameworks */,
-				CDD363F69250969AA2F7747D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -425,51 +382,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		C80AE54CAEEB4F855A64DEA1 /* [CP] Check Pods Manifest.lock */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Check Pods Manifest.lock";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n";
-			showEnvVarsInLog = 0;
-		};
-		CDD363F69250969AA2F7747D /* [CP] Copy Pods Resources */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Copy Pods Resources";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IronWaterTest/Pods-IronWaterTest-resources.sh\"\n";
-			showEnvVarsInLog = 0;
-		};
-		D6203E5ECF2C632634D70299 /* [CP] Embed Pods Frameworks */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-			);
-			name = "[CP] Embed Pods Frameworks";
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-IronWaterTest/Pods-IronWaterTest-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		D916DC51B575359E9E656F24 /* [CP] Copy Pods Resources */ = {
@@ -669,7 +581,6 @@
 		};
 		847D54611E585AD4001A1C4F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 9A7520B8A8A65EE29B6756A6 /* Pods-IronWaterTest.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IronWaterTest/Info.plist;
@@ -682,7 +593,6 @@
 		};
 		847D54621E585AD4001A1C4F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 40E1419C71AF891B9FABDACC /* Pods-IronWaterTest.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = IronWaterTest/Info.plist;
@@ -695,7 +605,6 @@
 		};
 		847D54641E585AD4001A1C4F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3FBBFEB1EDBEF8178106522E /* Pods-IronWaterTestTests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -710,7 +619,6 @@
 		};
 		847D54651E585AD4001A1C4F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = C1127C0A56C65E52C2492C2B /* Pods-IronWaterTestTests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				BUNDLE_LOADER = "$(TEST_HOST)";
@@ -725,7 +633,6 @@
 		};
 		847D54671E585AD4001A1C4F /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = A04663FD4E24BC95362E86C7 /* Pods-IronWaterTestUITests.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = IronWaterTestUITests/Info.plist;
@@ -739,7 +646,6 @@
 		};
 		847D54681E585AD4001A1C4F /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 51EE4DC96D5306EC4D4B0A30 /* Pods-IronWaterTestUITests.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
 				INFOPLIST_FILE = IronWaterTestUITests/Info.plist;

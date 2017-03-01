@@ -26,8 +26,6 @@
 		8486A09F1E5C1DBD008794C4 /* UserModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486A09E1E5C1DBD008794C4 /* UserModel.swift */; };
 		8486A0A11E5C4A59008794C4 /* TebleViewCellDate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8486A0A01E5C4A59008794C4 /* TebleViewCellDate.xib */; };
 		8486A0A31E5C4B55008794C4 /* TableViewCellDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486A0A21E5C4B55008794C4 /* TableViewCellDate.swift */; };
-		8486A0A51E5C5B78008794C4 /* TableCellDate.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8486A0A41E5C5B78008794C4 /* TableCellDate.xib */; };
-		8486A0A71E5C5BC7008794C4 /* TableCellDate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8486A0A61E5C5BC7008794C4 /* TableCellDate.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,8 +71,6 @@
 		8486A09E1E5C1DBD008794C4 /* UserModel.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UserModel.swift; sourceTree = "<group>"; };
 		8486A0A01E5C4A59008794C4 /* TebleViewCellDate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TebleViewCellDate.xib; sourceTree = "<group>"; };
 		8486A0A21E5C4B55008794C4 /* TableViewCellDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableViewCellDate.swift; sourceTree = "<group>"; };
-		8486A0A41E5C5B78008794C4 /* TableCellDate.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TableCellDate.xib; sourceTree = "<group>"; };
-		8486A0A61E5C5BC7008794C4 /* TableCellDate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TableCellDate.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -169,8 +165,6 @@
 				844D836F1E59890200DFA006 /* TableViewGender.swift */,
 				8486A0A01E5C4A59008794C4 /* TebleViewCellDate.xib */,
 				8486A0A21E5C4B55008794C4 /* TableViewCellDate.swift */,
-				8486A0A41E5C5B78008794C4 /* TableCellDate.xib */,
-				8486A0A61E5C5BC7008794C4 /* TableCellDate.swift */,
 			);
 			name = xib;
 			sourceTree = "<group>";
@@ -296,7 +290,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				8486A0A51E5C5B78008794C4 /* TableCellDate.xib in Resources */,
 				847D546B1E586135001A1C4F /* TableViewCellUser.xib in Resources */,
 				844D836C1E5983B900DFA006 /* TableViewGender.xib in Resources */,
 				847D54461E585AD3001A1C4F /* LaunchScreen.storyboard in Resources */,
@@ -431,7 +424,6 @@
 				847D543C1E585AD3001A1C4F /* AppDelegate.swift in Sources */,
 				847D54731E586787001A1C4F /* ViewControllerSplash.swift in Sources */,
 				8486A09F1E5C1DBD008794C4 /* UserModel.swift in Sources */,
-				8486A0A71E5C5BC7008794C4 /* TableCellDate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

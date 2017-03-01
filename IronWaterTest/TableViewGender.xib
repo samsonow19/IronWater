@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -12,15 +12,15 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="106" id="9Fx-b9-7GQ" customClass="TableViewGender" customModule="IronWaterTest" customModuleProvider="target">
-            <rect key="frame" x="0.0" y="0.0" width="375" height="106"/>
+        <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="102" id="9Fx-b9-7GQ" customClass="TableViewGender" customModule="IronWaterTest" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
             <autoresizingMask key="autoresizingMask"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="9Fx-b9-7GQ" id="FgM-vc-Zk2">
-                <rect key="frame" x="0.0" y="0.0" width="375" height="105"/>
+                <rect key="frame" x="0.0" y="0.0" width="375" height="102"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0IZ-nM-CIM">
-                        <rect key="frame" x="16" y="16" width="154.5" height="40"/>
+                        <rect key="frame" x="16" y="16" width="110.5" height="40"/>
                         <constraints>
                             <constraint firstAttribute="height" constant="40" id="g3b-Me-W01"/>
                         </constraints>
@@ -28,44 +28,28 @@
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
                     </label>
-                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" text="Не выбрано" textAlignment="right" translatesAutoresizingMaskIntoConstraints="NO" id="Xcv-sh-NY0">
-                        <rect key="frame" x="204.5" y="16" width="154.5" height="40"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                        <constraints>
-                            <constraint firstAttribute="height" constant="40" id="cFN-i2-cbM"/>
-                        </constraints>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="SameText" textAlignment="right" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="jD7-7z-oJT">
+                        <rect key="frame" x="192" y="16" width="167" height="40"/>
                         <color key="textColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
-                        <connections>
-                            <outlet property="delegate" destination="FgM-vc-Zk2" id="uIt-ff-Sxe"/>
-                        </connections>
-                    </textView>
-                    <pickerView hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="xaq-hk-SLr">
-                        <rect key="frame" x="204" y="16" width="155" height="74"/>
-                        <color key="tintColor" white="0.33333333333333331" alpha="1" colorSpace="calibratedWhite"/>
-                    </pickerView>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
                 </subviews>
                 <constraints>
-                    <constraint firstAttribute="trailingMargin" secondItem="Xcv-sh-NY0" secondAttribute="trailing" constant="8" id="1I6-Yi-GYY"/>
-                    <constraint firstItem="xaq-hk-SLr" firstAttribute="top" secondItem="FgM-vc-Zk2" secondAttribute="topMargin" constant="8" id="5d2-er-DSg"/>
-                    <constraint firstAttribute="bottomMargin" secondItem="xaq-hk-SLr" secondAttribute="bottom" constant="8" id="J2i-eQ-VXM"/>
-                    <constraint firstItem="Xcv-sh-NY0" firstAttribute="top" secondItem="FgM-vc-Zk2" secondAttribute="topMargin" constant="8" id="N3u-8d-T50"/>
-                    <constraint firstItem="Xcv-sh-NY0" firstAttribute="leading" secondItem="0IZ-nM-CIM" secondAttribute="trailing" constant="34" id="RcC-V0-ab0"/>
-                    <constraint firstItem="0IZ-nM-CIM" firstAttribute="width" secondItem="Xcv-sh-NY0" secondAttribute="width" id="TPr-ap-V7d"/>
-                    <constraint firstItem="0IZ-nM-CIM" firstAttribute="width" secondItem="xaq-hk-SLr" secondAttribute="width" id="cy0-72-d4i"/>
-                    <constraint firstItem="xaq-hk-SLr" firstAttribute="leading" secondItem="0IZ-nM-CIM" secondAttribute="trailing" constant="33.5" id="dzQ-CY-IwR"/>
+                    <constraint firstItem="jD7-7z-oJT" firstAttribute="top" secondItem="FgM-vc-Zk2" secondAttribute="topMargin" constant="8" id="0dE-oy-k2Q"/>
+                    <constraint firstItem="jD7-7z-oJT" firstAttribute="width" secondItem="0IZ-nM-CIM" secondAttribute="width" id="OfQ-hj-C55"/>
                     <constraint firstItem="0IZ-nM-CIM" firstAttribute="leading" secondItem="FgM-vc-Zk2" secondAttribute="leadingMargin" constant="8" id="eZV-rK-zWE"/>
-                    <constraint firstAttribute="trailingMargin" secondItem="xaq-hk-SLr" secondAttribute="trailing" constant="8" id="pIa-mx-5wx"/>
+                    <constraint firstItem="jD7-7z-oJT" firstAttribute="height" secondItem="0IZ-nM-CIM" secondAttribute="height" id="gbW-HX-pMa"/>
+                    <constraint firstAttribute="trailingMargin" secondItem="jD7-7z-oJT" secondAttribute="trailing" constant="8" id="r6Z-BX-b8j"/>
                     <constraint firstItem="0IZ-nM-CIM" firstAttribute="top" secondItem="FgM-vc-Zk2" secondAttribute="topMargin" constant="8" id="rlG-Uq-DWj"/>
+                    <constraint firstItem="jD7-7z-oJT" firstAttribute="leading" secondItem="0IZ-nM-CIM" secondAttribute="trailing" constant="122" id="zcB-M6-aMf"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>
-                <outlet property="editTextView" destination="Xcv-sh-NY0" id="kh3-2z-r2T"/>
+                <outlet property="genderTextFild" destination="jD7-7z-oJT" id="Huq-94-xDY"/>
                 <outlet property="labelText" destination="0IZ-nM-CIM" id="nF2-DC-mTu"/>
-                <outlet property="pickerView" destination="xaq-hk-SLr" id="Jyq-A2-yWh"/>
             </connections>
-            <point key="canvasLocation" x="-70" y="7"/>
+            <point key="canvasLocation" x="-70.5" y="5"/>
         </tableViewCell>
     </objects>
 </document>

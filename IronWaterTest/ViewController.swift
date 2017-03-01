@@ -33,6 +33,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
             userDate = getValue as! [NSString]
         }
         UserModel.sharedInstance.modelFromArray(array: userDate )
+        let userNib = UINib(nibName: "TableViewCellUser", bundle: nil)
+        self.tableView.register(userNib, forCellReuseIdentifier: "TableViewCellUser")
     }
     
     deinit {
@@ -50,10 +52,8 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
 
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
       
-        let cell = Bundle.main.loadNibNamed("TableViewCellUser",
-                                            owner: self, options: nil)?.first
-                                            as! TableViewCellUser
-        cell.constLabel.text = arrayConst[indexPath.row]
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellUser", for: indexPath)  as! TableViewCellUser
+        cell.constLabel.text = arrayConst[indexPath.row] as String
         cell.editLabel.text = userDate[indexPath.row] as String
         return cell
     }

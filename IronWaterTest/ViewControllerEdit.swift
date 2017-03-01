@@ -10,15 +10,17 @@ import UIKit
 
 class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewDelegate {
 
+
     @IBOutlet weak var tabelViewEdit: UITableView!
     
-    var arrayConst: [String]  = ["Имя","Фамилия","Отчество","Дата Рождения","","Пол"]
+    var arrayConst: [String]  = ["Имя","Фамилия","Отчество","Дата Рождения","Пол"]
     var array = [NSString]()
     
-    var useDate: Bool = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        
         tabelViewEdit.rowHeight = UITableViewAutomaticDimension
         
         let userDateDafaults  = UserDefaults.standard
@@ -26,26 +28,27 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
         print(array)
 
         NotificationCenter.default.addObserver(forName: ADD_HEIDHT_CELL_NOTIFICATION, object: nil, queue: nil) { (Notification) in
-            UIView.setAnimationsEnabled(false)
+         
             self.tabelViewEdit.beginUpdates()
             self.tabelViewEdit.endUpdates()
-            let scrollTo = self.tabelViewEdit.contentSize.height - self.tabelViewEdit.frame.size.height
-            self.tabelViewEdit.setContentOffset( CGPoint(x: 0, y: scrollTo), animated: false)
+       
             UIView.setAnimationsEnabled(true)
-        } // size textFile
+        } // size textFile*/
         
         
-        NotificationCenter.default.addObserver(forName: HIDE_SHOW_CELL_WITH_DATE_PICKER, object: nil, queue: nil) { (Notification) in
-            if self.useDate {
-                self.useDate = false
-            } else {
-                self.useDate = true
-            }
-            UIView.setAnimationsEnabled(true)
-            self.tabelViewEdit.beginUpdates()
-            self.tabelViewEdit.endUpdates()
-            UIView.setAnimationsEnabled(true)
-        }// hide-show
+        var userNib = UINib(nibName: "TableViewCellEdit", bundle: nil)
+        self.tabelViewEdit.register(userNib, forCellReuseIdentifier: "TableViewCellEdit")
+        
+        userNib = UINib(nibName: "TableViewGender", bundle: nil)
+        self.tabelViewEdit.register(userNib, forCellReuseIdentifier: "TableViewGender")
+        
+        userNib = UINib(nibName: "TebleViewCellDate", bundle: nil)
+        self.tabelViewEdit.register(userNib, forCellReuseIdentifier: "TebleViewCellDate")
+        
+        userNib = UINib(nibName: "TableCellDate", bundle: nil)
+        self.tabelViewEdit.register(userNib, forCellReuseIdentifier: "TableCellDate")
+        
+       // self.switchPickerView(show: true)
     }
     
     func numberOfSections(in tableView: UITableView) -> Int {
@@ -60,37 +63,32 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
         if indexPath.row < 3 {
         print(arrayConst)
         print(array)
-        let cell = Bundle.main.loadNibNamed("TableViewCellEdit", owner: self, options: nil)?.first as! TableViewCellUserEdit
+            
+        let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewCellEdit", for: indexPath)  as! TableViewCellUserEdit
+            
+            
         cell.labelText.text = arrayConst[indexPath.row]
         cell.editText.text = array[indexPath.row] as String
         return cell
         } else {
             if indexPath.row == 3 {
-                let cell = Bundle.main.loadNibNamed("TebleViewCellDate", owner: self, options: nil)?.first as! TableViewCellDate
+                let cell = tableView.dequeueReusableCell(withIdentifier: "TebleViewCellDate", for: indexPath)  as! TableViewCellDate
+
                 cell.labelText.text = arrayConst[indexPath.row]
-                cell.editTextView.text = array[indexPath.row] as String
+                cell.dateTexteFild.text = array[indexPath.row] as String
                 return cell
             }
-            if indexPath.row == 4 {
-                let cell = Bundle.main.loadNibNamed("TableCellDate", owner: self, options: nil)?.first as! TableCellDate
-                return cell
-            }
-            let cell = Bundle.main.loadNibNamed("TableViewGender", owner: self, options: nil)?.first as! TableViewGender
+      
+            let cell = tableView.dequeueReusableCell(withIdentifier: "TableViewGender", for: indexPath)  as! TableViewGender
+            
             cell.labelText.text = arrayConst[indexPath.row]
-            cell.editTextView.text = array[indexPath.row-1] as String
+            cell.genderTextFild.text = array[indexPath.row] as String
             return cell
            
         }
     }
 
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.row == 4 {
-            if  useDate {
-               return UITableViewAutomaticDimension
-            } else {
-               return 0
-            }
-        }
         
         return UITableViewAutomaticDimension
     }
@@ -98,6 +96,7 @@ class ViewControllerEdit: UIViewController , UITableViewDataSource, UITableViewD
     func tableView(_ tableView: UITableView, estimatedHeightForRowAt indexPath: IndexPath) -> CGFloat {
         return UITableViewAutomaticDimension
     }
+
 
     // MARK: - @IBAction
     

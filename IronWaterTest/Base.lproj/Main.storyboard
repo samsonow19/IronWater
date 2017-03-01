@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zim-Ge-fCC">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="zim-Ge-fCC">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -7,7 +7,6 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11757"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
-        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
@@ -73,7 +72,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jRS-kv-Nij">
-                                <rect key="frame" x="16" y="0.0" width="343" height="667"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="BYZ-38-t0r" id="2ci-zd-sZe"/>
@@ -83,10 +82,10 @@
                         </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="jRS-kv-Nij" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="QpY-Kf-KsE"/>
-                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jRS-kv-Nij" secondAttribute="bottom" id="cl9-Ci-TzR"/>
-                            <constraint firstItem="jRS-kv-Nij" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="topMargin" id="wcZ-Cp-QaH"/>
-                            <constraint firstItem="jRS-kv-Nij" firstAttribute="trailing" secondItem="8bC-Xf-vdC" secondAttribute="trailingMargin" id="z1G-Ox-Guc"/>
+                            <constraint firstAttribute="trailing" secondItem="jRS-kv-Nij" secondAttribute="trailing" id="0bh-MX-iMr"/>
+                            <constraint firstItem="jRS-kv-Nij" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="8gR-01-lb6"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="jRS-kv-Nij" secondAttribute="bottom" id="Srb-Rj-wRl"/>
+                            <constraint firstItem="jRS-kv-Nij" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="vPd-Jn-GbI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Просмотр" id="GOq-F0-gtX">
@@ -118,7 +117,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pKl-um-Eee">
-                                <rect key="frame" x="24" y="8" width="327" height="651"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                 <connections>
                                     <outlet property="dataSource" destination="OlM-iE-C1H" id="MmP-0G-677"/>
@@ -128,10 +127,10 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailingMargin" secondItem="pKl-um-Eee" secondAttribute="trailing" constant="8" id="AYv-3s-z3y"/>
-                            <constraint firstItem="pKl-um-Eee" firstAttribute="top" secondItem="2dW-gW-eEM" secondAttribute="topMargin" constant="8" id="BsO-Ic-Ay8"/>
-                            <constraint firstItem="pKl-um-Eee" firstAttribute="leading" secondItem="2dW-gW-eEM" secondAttribute="leadingMargin" constant="8" id="GU9-Ib-IX8"/>
-                            <constraint firstItem="c0i-7l-Iht" firstAttribute="top" secondItem="pKl-um-Eee" secondAttribute="bottom" constant="8" id="s3a-pK-zUl"/>
+                            <constraint firstItem="c0i-7l-Iht" firstAttribute="top" secondItem="pKl-um-Eee" secondAttribute="bottom" id="PTf-3Y-caa"/>
+                            <constraint firstItem="pKl-um-Eee" firstAttribute="top" secondItem="2dW-gW-eEM" secondAttribute="top" id="c5K-0g-zRY"/>
+                            <constraint firstItem="pKl-um-Eee" firstAttribute="leading" secondItem="2dW-gW-eEM" secondAttribute="leading" id="inK-Oj-b9A"/>
+                            <constraint firstAttribute="trailing" secondItem="pKl-um-Eee" secondAttribute="trailing" id="rxo-p7-982"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Редактирование" id="duC-Dv-m1G">

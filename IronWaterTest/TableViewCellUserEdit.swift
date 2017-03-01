@@ -12,7 +12,6 @@ import UIKit
 class TableViewCellUserEdit: UITableViewCell, UITextViewDelegate {
     
     @IBOutlet weak var labelText: UILabel!
-    
     @IBOutlet weak var editText: UITextView!
     
     override func awakeFromNib() {
@@ -25,15 +24,18 @@ class TableViewCellUserEdit: UITableViewCell, UITextViewDelegate {
     func textViewDidChange(_ textView: UITextView) {
         updateModelUser()
         let startHeight = textView.frame.size.height
-        let calcHeight = textView.sizeThatFits(textView.frame.size).height  //iOS 8+ only
+        let calcHeight = textView.sizeThatFits(textView.frame.size).height 
+
         if startHeight != calcHeight {
+
             NotificationCenter.default.post(Notification(name:ADD_HEIDHT_CELL_NOTIFICATION))
         }
     }
 
+
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        updateModelUser() // maybe dell
+    
     }
     
     func addDoneButtonOnKeyboard() {

@@ -8,26 +8,28 @@
 
 import UIKit
 
-class TableViewGender: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSource, UITextViewDelegate{
+class TableViewGender: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSource, UITextFieldDelegate{
+    
+    @IBOutlet weak var genderTextFild: UITextField!
     
     @IBOutlet weak var labelText: UILabel!
- 
-    @IBOutlet weak var pickerView: UIPickerView!
-    
-    @IBOutlet weak var editTextView: UITextView!
+
+    var pickerGender = UIPickerView()
 
     var genderValue = ["Не указан","мужской","женский"]
     
     override func awakeFromNib() {
-        pickerView.delegate = self
-        pickerView.dataSource = self
-        editTextView.delegate = self
+        
+        pickerGender.delegate = self
+        pickerGender.dataSource = self
+        genderTextFild.delegate = self
+        genderTextFild.inputView = self.pickerGender
         super.awakeFromNib()
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
-        UserModel.sharedInstance.userGender = editTextView.text
+        UserModel.sharedInstance.userGender = genderTextFild.text
     }
     
     func numberOfComponents(in pickerView: UIPickerView) -> Int {
@@ -43,22 +45,8 @@ class TableViewGender: UITableViewCell, UIPickerViewDelegate, UIPickerViewDataSo
     }
     
     func pickerView(_ pickerView: UIPickerView, didSelectRow row: Int, inComponent component: Int) {
-        editTextView.text = genderValue[row]
-        pickerView.isHidden  = true
-        editTextView.isHidden = false
-        UserModel.sharedInstance.userGender = editTextView.text
+        genderTextFild.text = genderValue[row]
+      
     }
-
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView  == self.editTextView {
-            editTextView.isHidden = true
-            self.pickerView.isHidden = false
-            editTextView.endEditing(true)
-            print(editTextView.text)
-        }
-    }
-    
-    
-    
 
 }

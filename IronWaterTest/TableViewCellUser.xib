@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11762" systemVersion="15G1217" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -20,7 +20,7 @@
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vvo-Nz-nub">
-                        <rect key="frame" x="16" y="16" width="164" height="20.5"/>
+                        <rect key="frame" x="16" y="16" width="164" height="98.5"/>
                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                         <nil key="textColor"/>
                         <nil key="highlightedColor"/>
@@ -40,6 +40,7 @@
                     <constraint firstAttribute="trailingMargin" secondItem="K5l-zv-VIe" secondAttribute="trailing" constant="8" id="p3I-Mf-THF"/>
                     <constraint firstItem="vvo-Nz-nub" firstAttribute="width" secondItem="K5l-zv-VIe" secondAttribute="width" id="tDd-QE-ngx"/>
                     <constraint firstItem="vvo-Nz-nub" firstAttribute="top" secondItem="NB5-8o-4Kj" secondAttribute="topMargin" constant="8" id="we6-kE-h1M"/>
+                    <constraint firstItem="vvo-Nz-nub" firstAttribute="height" secondItem="K5l-zv-VIe" secondAttribute="height" id="xz0-FU-Z4h"/>
                 </constraints>
             </tableViewCellContentView>
             <connections>

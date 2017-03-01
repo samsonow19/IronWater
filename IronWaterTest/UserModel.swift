@@ -7,6 +7,11 @@
 //
 
 import Foundation
+enum UserGender: String{
+    case NotGender = "Не указан"
+    case ManGender = "Мужчина"
+    case WomenGender = "Женщина"
+}
 class UserModel : NSObject {
     
     var userName: String? = nil
@@ -16,15 +21,16 @@ class UserModel : NSObject {
     var userGender: String? = nil
  
     static let sharedInstance = UserModel()
-
+    
     func myValidate() -> Bool {
+      
         if userName  == "" {
             return false
         }
         if userSurname  == "" {
             return false
         }
-        if userName  == "" {
+        if userPartronymic  == "" {
             return false
         }
         if userGender == "Не указан" {

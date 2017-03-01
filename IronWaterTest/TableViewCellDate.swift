@@ -8,27 +8,36 @@
 
 import UIKit
 
-class TableViewCellDate: UITableViewCell, UITextViewDelegate {
+class TableViewCellDate: UITableViewCell, UIPickerViewDelegate {
 
     @IBOutlet weak var labelText: UILabel!
+  
+    @IBOutlet weak var dateTexteFild: UITextField!
     
-    @IBOutlet weak var editTextView: UITextView!
+    var pickerDateGender = UIDatePicker()
 
     override func awakeFromNib() {
-        
+        super.awakeFromNib()
+        /*
         NotificationCenter.default.addObserver(forName: UPDATE_DATE_TO_CELL_NOTIFICATION, object: nil, queue: nil) { (Notification) in
             self.editTextView.text = UserModel.sharedInstance.userBithday
-        }
-        editTextView.delegate = self
-        super.awakeFromNib()
+        }*/
+        pickerDateGender.addTarget(self, action: #selector(TableViewCellDate.didChangeDate(_:)), for: UIControlEvents.valueChanged)
+        dateTexteFild.inputView = pickerDateGender
+        self.pickerDateGender.datePickerMode = UIDatePickerMode.date
+    }
+    
+    func didChangeDate(_ sender: UIDatePicker) {
+        let dateFormatter: DateFormatter = DateFormatter()
+        dateFormatter.dateFormat = "dd.MM.yyyy"
+        dateFormatter.locale = Locale(identifier:"en_US_POSIX")
+        let strDate = dateFormatter.string(from: pickerDateGender.date)
+        UserModel.sharedInstance.userBithday = strDate
+        dateTexteFild.text = strDate
     }
 
-    func textViewDidBeginEditing(_ textView: UITextView) {
-        if textView  == self.editTextView {
-            NotificationCenter.default.post(Notification(name:HIDE_SHOW_CELL_WITH_DATE_PICKER))
-            editTextView.endEditing(true)
-        }
-    }
+ 
+
     
 
 
